@@ -1,0 +1,71 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+/**
+ *
+ * @author kevinlawrence
+ */
+public class InwardClockwiseSpiralTest {
+
+//    public InwardClockwiseSpiralTest() {
+//    }
+//
+//    @BeforeClass
+//    public static void setUpClass() throws Exception {
+//    }
+//
+//    @AfterClass
+//    public static void tearDownClass() throws Exception {
+//    }
+//
+//    @Before
+//    public void setUp() {
+//    }
+//
+//    @After
+//    public void tearDown() {
+//    }
+//
+
+    /**
+     * Test of encode method, of class InwardClockwiseSpiral.
+     */
+    @Test
+    public void testEncode() {
+        System.out.println("InwardClockwiseSpiral.encode");
+        char[][] plainText = { {'i', 'h', 'g', 'f', 'e'},
+                               {'j', 'u', 't', 's', 'd'},
+                               {'k', 'v', 'y', 'r', 'c'},
+                               {'l', 'w', 'x', 'q', 'b'},
+                               {'m', 'n', 'o', 'p', 'a'}
+                               };
+        
+        StartPoint startPoint = StartPoint.SOUTH_EAST;
+        InwardClockwiseSpiral instance = new InwardClockwiseSpiral();
+        String expResult = "abcdefghijklmnopqrstuvwxy";
+        String result = instance.encode(plainText, startPoint);
+        assertEquals(expResult, result);
+    }
+
+//    /**
+//     * Test of decode method, of class InwardClockwiseSpiral.
+//     */
+//    @Test
+//    public void testDecode() {
+//        System.out.println("decode");
+//        String cipherText = "";
+//        StartPoint startPoint = null;
+//        InwardClockwiseSpiral instance = new InwardClockwiseSpiral();
+//        char[][] expResult = null;
+//        char[][] result = instance.decode(cipherText, startPoint);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+
+}
