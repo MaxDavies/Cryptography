@@ -92,7 +92,7 @@ public class InwardClockwiseSpiralRouteCipher implements RouteCipher2D {
 
         Point current = new Point(x, y);
         /*
-         *  Start at point, exvery time change direction, subtract one from the
+         *  Start at point, every time change direction, subtract one from the
          *  directionLimit, procede in that direction until limit (might also
          *  want to have extra safety of array size - superfluous?), turn...
          */
