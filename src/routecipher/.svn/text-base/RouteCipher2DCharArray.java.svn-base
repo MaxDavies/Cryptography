@@ -13,25 +13,21 @@ public class RouteCipher2DCharArray {//extends [][] {
     public RouteCipher2DCharArray(char[][] characterArray){
         data = new Data[characterArray.length][characterArray[0].length];
 
-        for (int i = 0; i < characterArray.length; i++) {
-            for (int j = 0; j < characterArray[0].length; j++) {
+        for (int i = 0; i < characterArray.length; i++)
+            for (int j = 0; j < characterArray[0].length; j++)
                 this.data[i][j].setCharacter(characterArray[i][j]);
-            }
-        }
     }
 
     public boolean allProcessed(){
         boolean isProcessed = true;
 
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 0; i < data.length; i++)
             for (int j = 0; j < data[0].length; j++){
                 isProcessed &= data[i][j].isProcessed();
 
-                if (!isProcessed) {
+                if (!isProcessed)
                     break;
-                }
             }
-        }
         return isProcessed;
     }
 

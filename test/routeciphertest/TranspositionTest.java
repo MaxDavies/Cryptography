@@ -1,8 +1,11 @@
+package routeciphertest;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
+import routecipher.Transposition;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -50,7 +53,7 @@ public class TranspositionTest {
     //        "Nearly all men can stand adversity, but if you want to test a man's character, give him power." - Abraham Lincoln
     //        "Few false ideas have more firmly gripped the minds of so many intelligent men than the one that, if they just tried, they could invent a cipher that no one could break." - David Kahn
     //        As soon as men decide that all means are permitted to fight an evil, then their good becomes indistinguishable from the evil that they set out to destroy Christopher Dawson, The Judgment of Nations, 1942
-    //        "Within Europe, all email, telephone, and fax communica tions are routinely intercepted by the United States National Security Agency" - European Parliament report "Assessing the Technologies of Political Control"
+    //        "Within Europe, all email, telephone, and fax communications are routinely intercepted by the United States National Security Agency" - European Parliament report "Assessing the Technologies of Political Control"
 
     /**
      * Test of encode method, of class Transposition.
