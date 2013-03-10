@@ -135,18 +135,32 @@ public class RailRouteCipher implements RouteCipher2D {
         return cipherText;
     }
 
-    public void printArray2D(char[][] array) {
-        for (int row = 0; row < array.length; row++) {
-            for (int column = 0; column < array[row].length; column++) {
-                System.out.printf("[%d, %d] = %s \n", row, column, array[row][column]);
-            }
-        }
+    public char[][] decode(String cipherText, StartPoint startPoint, int columns, int rows) {
+        String plainText = decode(cipherText);
+        
+        return Library.stringTo2DArray(plainText, rows, columns);
     }
 
-    public char[][] decode(String cipherText, StartPoint startPoint, int columns, int rows) {
-        char[][] plainText = new char[rows][columns];
-//        String cipherText = "";
+    public String decode(String cipherText) {
+        String plainText= "";
+        char[][] array = new char[rows][columns];
+        int index = 0;
         
+        while (index < cipherText.length()){
+            //write the string into the decode array vertically
+            for (int column = 0; column < columns; column++) {
+                for (int row = 0; row < rows; row++) {
+                    array[row][column] = cipherText.charAt(index);
+                }
+            }
+            
+            //read the data out of the decode array horizontally
+            for (int row = 0; row < rows; row++) {
+                for (int column = 0; column < columns; column++) {
+                    plainText += array[row][column];
+                }
+            }
+        }
         return plainText;
     }
 
