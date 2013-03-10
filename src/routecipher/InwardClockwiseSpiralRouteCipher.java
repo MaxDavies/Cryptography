@@ -13,27 +13,16 @@ import java.util.ArrayList;
  * @author kevinlawrence
  */
 public class InwardClockwiseSpiralRouteCipher implements RouteCipher2D {
-    /*
-     *      2D array x = n, y = m [generalized start (anywhere): do this later]
-     *
-     *      y / x   0   1   2   ... n-1
-     *      0   >   \   s   >   >   |
-     *      1   ^       >   >   >   |
-     *      2   |   <   <   <   <   <
-     *      ...
-     *      m-1
-     */
-
 
     /*
      *      2D array x = n, y = m [corner start]
      *
-     *      y / x   0   1   2   ... n-1
-     *      0   s   >   >   >   >   |
-     *      1   >   >   >   >   |   |
-     *      2   |   >   >   E   |   |
-     *      ... |   |   <   <   <   |
-     *      m-1 |   <   <   <   <   <
+     *      y / x   0   1   2   3  ... n-1
+     *      0       S   >   >   >   >   v
+     *      1       >   >   >   >   v   v
+     *      2       ^   >   >   E   v   v
+     *      ...     ^   ^   <   <   <   v
+     *      m-1     ^   <   <   <   <   <
      */
 
 //    public String encode(String plainText, int gridSizeColumns, int gridSizeRows){
