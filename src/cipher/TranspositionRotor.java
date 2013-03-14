@@ -28,18 +28,37 @@ public class TranspositionRotor implements Transposition {
     //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="Methods">
+    /*
+     * Rotate the rotor in the direction define by the Direction property 
+     * (RotationDirection.FORWARD will increment the rotor position positively, 
+     * while RotationDirection.BACKWARD will decrement the the rotor position in
+     * the negative direction) and to the number of steps defined by the Steps 
+     * property.
+     */
     public void rotate(){
         rotate(getDirection(), getSteps());
     }
     
+    /*
+     * Rotate the rotor in the direction define by the Direction property 
+     * (RotationDirection.FORWARD will increment the rotor position positively, 
+     * while RotationDirection.BACKWARD will decrement the the rotor position in
+     * the negative direction) and to the number of steps defined by the Steps 
+     * property.
+     * @param direction the direction to rotate the rotor
+     * @param steps the number of steps to rotate the rotor
+     */
     public void rotate(RotationDirection direction, int steps){
-        
+        for (int i = 0; i < steps; i++) {
+            setPosition( direction == RotationDirection.FORWARD ? position++ : position--);
+        }
     }
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Properties">
     private RotationDirection direction;
     private int steps;
+    private int position;
     private boolean reflector;
     private HashMap inputMap, outputMap;
     
@@ -82,6 +101,24 @@ public class TranspositionRotor implements Transposition {
      */
     public void setReflector(boolean reflector) {
         this.reflector = reflector;
+    }
+
+    /**
+     * @return the position
+     */
+    public int getPosition() {
+        return position;
+    }
+
+    /**
+     * @param position the position to set
+     */
+    public void setPosition(int position) {
+        if (position >= 0){
+            this.position = position % inputMap.size();
+        } else {
+            this.position = inputMap.size() - (position % inputMap.size());
+        }        
     }
     //</editor-fold>
 
