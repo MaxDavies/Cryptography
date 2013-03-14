@@ -53,6 +53,26 @@ public class TranspositionRotor implements Transposition {
             setPosition( direction == RotationDirection.FORWARD ? position++ : position--);
         }
     }
+    
+    public TranspositionData transpose(int connection, TranspositionDirection direction) {
+//        char value = 'A';
+//        int connector = 0;
+//        
+////        if (direction == TranspositionDirection.INPUT){
+////            value = inputMap.
+////        } else {
+////            
+////        }
+//        
+//        return new TranspositionData(value, connector); 
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public TranspositionData transpose(String value, TranspositionDirection direction) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Properties">
