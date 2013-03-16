@@ -4,6 +4,7 @@
  */
 package cipher;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -11,21 +12,6 @@ import java.util.HashMap;
  * @author kevin.lawrence
  */
 public class TranspositionRotor implements Transposition {
-    
-    //<editor-fold defaultstate="collapsed" desc="Constructors">
-    {
-        this.setDirection(RotationDirection.FORWARD);
-        this.setSteps(1);
-        inputMap = new HashMap();
-    }
-    
-    public TranspositionRotor(){ }
-    
-    public TranspositionRotor(RotationDirection direction, int steps){
-        this.direction = direction;
-        this.steps = steps;
-    }
-    //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="Methods">
     /*
@@ -54,33 +40,86 @@ public class TranspositionRotor implements Transposition {
         }
     }
     
+    //<editor-fold defaultstate="collapsed" desc="Transposition Interface">
     public TranspositionData transpose(int connection, TranspositionDirection direction) {
-//        char value = 'A';
-//        int connector = 0;
-//        
-////        if (direction == TranspositionDirection.INPUT){
-////            value = inputMap.
-////        } else {
-////            
-////        }
-//        
-//        return new TranspositionData(value, connector); 
-        throw new UnsupportedOperationException("Not supported yet.");
+        char connectionChar;
+
+        if (direction == TranspositionDirection.INPUT){
+            connectionChar = this.inputValues.get( (position + connection) % this.inputValues.size());
+        } else {
+            connectionChar = this.inputValues.get( (position + connection) % this.inputValues.size());
+        }
+        
+        return transpose(connectionChar, direction);
     }
 
     public TranspositionData transpose(String value, TranspositionDirection direction) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        char result;
+        int connector; 
+
+        if (direction == TranspositionDirection.INPUT){
+            result = (Character)inputMap.get(value);
+            connector = (this.inputValues.indexOf(value) + position) % this.inputValues.size();
+        } else {
+            result = (Character)outputMap.get(value);
+            connector = (this.outputValues.indexOf(value) + position) % this.outputValues.size();
+        }
+        
+        return new TranspositionData(result, connector);
     }
 
+    public char getOutput(char input) {
+        return (Character) inputMap.get(input);
+    }
+    
+    public char getInput(char output) {
+        return (Character) outputMap.get(output);
+    }
+    
+    public void setTranspositionMaps(char[] inputs, char[] outputs) {
+        inputMap.clear();
+        outputMap.clear();
+        inputValues.clear();
+        outputValues.clear();
+        
+        for (int i = 0; i < inputs.length; i++) {
+            inputMap.put(inputs[i], outputs[i]);
+            outputMap.put(outputs[i], inputs[i]);
+            
+            inputValues.add(inputs[i]);
+            outputValues.add(outputs[i]);
+        }
+    }
+    //</editor-fold>
     
     //</editor-fold>
-
+    
+    //<editor-fold defaultstate="collapsed" desc="Constructors">
+    {
+        this.setDirection(RotationDirection.FORWARD);
+        this.setSteps(1);
+        
+        inputMap = new HashMap();
+        outputMap = new HashMap();
+        inputValues = new ArrayList<Character>();
+        outputValues = new ArrayList<Character>();
+    }
+    
+    public TranspositionRotor(){ }
+    
+    public TranspositionRotor(RotationDirection direction, int steps){
+        this.direction = direction;
+        this.steps = steps;
+    }
+    //</editor-fold>
+ 
     //<editor-fold defaultstate="collapsed" desc="Properties">
     private RotationDirection direction;
     private int steps;
     private int position;
     private boolean reflector;
     private HashMap inputMap, outputMap;
+    private ArrayList<Character> inputValues, outputValues;
     
     /**
      * @return the direction
@@ -139,26 +178,6 @@ public class TranspositionRotor implements Transposition {
         } else {
             this.position = inputMap.size() - (position % inputMap.size());
         }        
-    }
-    //</editor-fold>
-
-    //<editor-fold defaultstate="collapsed" desc="Transposition Interface">
-    public char getOutput(char input) {
-        return (Character) inputMap.get(input);
-    }
-    
-    public char getInput(char output) {
-        return (Character) outputMap.get(output);
-    }
-    
-    public void setTranspositionMaps(char[] inputs, char[] outputs) {
-        inputMap.clear();
-        outputMap.clear();
-        
-        for (int i = 0; i < inputs.length; i++) {
-            inputMap.put(inputs[i], outputs[i]);
-            outputMap.put(outputs[i], inputs[i]);  
-        }
     }
     //</editor-fold>
 
