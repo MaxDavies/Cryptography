@@ -2,14 +2,22 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package cipher;
+package enigma;
 
 /**
  *
  * @author kevin.lawrence
  */
 public enum EnigmaRotorType {
-    COMMERCIAL("Commercial Enigma A, B"), ROCKET("German Railway [Rocket]"), SWISS_K("Swiss K"), ENIGMA_1("Enigma 1"), M3_ARMY("M3 Army"), M3_M4_NAVAL("M3 & M4 Naval"), M4_R2("M4 R2"), M4_R1("M4 R1"), NONE("");
+    COMMERCIAL("Commercial Enigma A, B"), 
+    ROCKET("German Railway [Rocket]"), 
+    SWISS_K("Swiss K"), 
+    ENIGMA_1("Enigma 1"), 
+    M3_ARMY("M3 Army"), 
+    M3_M4_NAVAL("M3 & M4 Naval"), 
+    M4_R2("M4 R2"), 
+    M4_R1("M4 R1"), 
+    NONE("", true);
     
     //<editor-fold defaultstate="collapsed" desc="Constructors">
     private EnigmaRotorType(String model, boolean reflector) {

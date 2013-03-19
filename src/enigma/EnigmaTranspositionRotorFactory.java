@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package cipher;
+package enigma;
 
 /**
  *
@@ -54,6 +54,8 @@ public class EnigmaTranspositionRotorFactory {
     public static TranspositionRotor getTranspositionRotor(EnigmaRotor enigmaRotor){
         TranspositionRotor rotor = new TranspositionRotor();
         
+        rotor.setReflector(enigmaRotor.getRotorType().isReflector());
+
         switch (enigmaRotor){
             case I_C:
                 rotor.setTranspositionMaps(INPUT_BASE, I_C_TRANS);
@@ -120,39 +122,30 @@ public class EnigmaTranspositionRotorFactory {
                 break;
             case BETA:
                 rotor.setTranspositionMaps(INPUT_BASE, BETA_TRANS);
-                rotor.setReflector(true);
                 break;
             case GAMMA:
                 rotor.setTranspositionMaps(INPUT_BASE, GAMMA_TRANS);
-                rotor.setReflector(true);
                 break;
             case REF_A:
                 rotor.setTranspositionMaps(INPUT_BASE, REF_A_TRANS);
-                rotor.setReflector(true);
                 break;
             case REF_B:
                 rotor.setTranspositionMaps(INPUT_BASE, REF_B_TRANS);
-                rotor.setReflector(true);
                 break;
             case REF_C:
                 rotor.setTranspositionMaps(INPUT_BASE, REF_C_TRANS);
-                rotor.setReflector(true);
                 break;
             case REF_B_THIN:
                 rotor.setTranspositionMaps(INPUT_BASE, REF_B_THIN_TRANS);
-                rotor.setReflector(true);
                 break;
             case REF_C_THIN:
                 rotor.setTranspositionMaps(INPUT_BASE, REF_C_THIN_TRANS);
-                rotor.setReflector(true);
                 break;
             case REF_ETW:
                 rotor.setTranspositionMaps(INPUT_BASE, REF_ETW_TRANS);
-                rotor.setReflector(true);
                 break;
-             
         }
-        
+
         return rotor;
     }
     

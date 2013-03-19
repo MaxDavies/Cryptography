@@ -59,6 +59,41 @@ public class Library {
     }
 
     /**
+     * Generate random char between the ordinal integer value rangeBase
+     * and the ordinal integer value rangeBase + range
+     * @param rangeBase the base value of the ordinal set
+     * @param range 
+     * @return
+     */
+    public static char getRandomCharacter(int rangeBase, int range) {
+        return (char) ((int) ((Math.random() * range) + rangeBase));
+    }
+
+    /**
+     * Generate random char between a and z
+     *
+     * @return
+     */
+    public static char getRandomLowerCaseLetter() {
+        int CHAR_BASE = 97;
+        int CHAR_RANGE = 26;
+
+        return (char) ((int) ((Math.random() * CHAR_RANGE) + CHAR_BASE));
+    }
+
+    /**
+     * Generate random char between a and z
+     *
+     * @return
+     */
+    public static char getRandomUpperCaseLetter() {
+        int CHAR_BASE = 97;
+        int CHAR_RANGE = 26;
+
+        return (char) ((int) ((Math.random() * CHAR_RANGE) + CHAR_BASE));
+    }
+
+    /**
      * Generate random integer between 0 and 10
      *
      * @return

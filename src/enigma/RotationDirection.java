@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package cipher;
+package enigma;
 
 /**
  *
  * @author kevin.lawrence
  */
-public class Enigma {
-    
+public enum RotationDirection {
+     FORWARD, BACKWARD
 }

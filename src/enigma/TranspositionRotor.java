@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package cipher;
+package enigma;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,6 +40,8 @@ public class TranspositionRotor implements Transposition {
         }
     }
     
+    //</editor-fold>
+        
     //<editor-fold defaultstate="collapsed" desc="Transposition Interface">
     public TranspositionData transpose(int connection, TranspositionDirection direction) {
         char connectionChar;
@@ -90,8 +92,6 @@ public class TranspositionRotor implements Transposition {
             outputValues.add(outputs[i]);
         }
     }
-    //</editor-fold>
-    
     //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="Constructors">
