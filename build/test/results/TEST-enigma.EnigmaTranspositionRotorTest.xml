@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="routeciphertest.RailRouteCipherTest" tests="11" time="0.081" timestamp="2013-03-19T06:15:02">
+<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="enigma.EnigmaTranspositionRotorTest" tests="5" time="0.095" timestamp="2013-03-19T06:15:01">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -54,7 +54,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner routeciphertest.RailRouteCipherTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-routeciphertest.RailRouteCipherTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher6171199928691307805.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit7782966267749155126.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaTranspositionRotorTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaTranspositionRotorTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher1798209619365682164.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit4959238482931849388.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -390,17 +390,45 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
   </properties>
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testSetRemoveSpaces" time="0.002" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testEncode_String" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testDecode_4args" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testDecode_String" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testGetRows" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testSetRows" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testGetColumns" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testSetColumns" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testIsRemoveSpaces" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testEncode_charArrArr_StartPoint" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testEncode2" time="0.0" />
-  <system-out><![CDATA[]]></system-out>
+  <testcase classname="enigma.EnigmaTranspositionRotorTest" name="testGetEnigmaRotor" time="0.006" />
+  <testcase classname="enigma.EnigmaTranspositionRotorTest" name="testSetEnigmaRotor" time="0.0" />
+  <testcase classname="enigma.EnigmaTranspositionRotorTest" name="testConstructor" time="0.001" />
+  <testcase classname="enigma.EnigmaTranspositionRotorTest" name="testTranposeCharacter" time="0.002" />
+  <testcase classname="enigma.EnigmaTranspositionRotorTest" name="testEnigmaTranpostionMaps" time="0.01" />
+  <system-out><![CDATA[getEnigmaRotor
+getEnigmaRotor
+Constructor
+transposeCharacter
+Transposition Maps
+   Transposition Map - I_C
+   Transposition Map - II_C
+   Transposition Map - III_C
+   Transposition Map - I_R
+   Transposition Map - II_R
+   Transposition Map - III_R
+   Transposition Map - UKW_R
+   Transposition Map - ETW_R
+   Transposition Map - I_K
+   Transposition Map - II_K
+   Transposition Map - III_K
+   Transposition Map - UKW_K
+   Transposition Map - ETW_K
+   Transposition Map - I
+   Transposition Map - II
+   Transposition Map - III
+   Transposition Map - IV
+   Transposition Map - V
+   Transposition Map - VI
+   Transposition Map - VII
+   Transposition Map - VIII
+   Transposition Map - BETA
+   Transposition Map - GAMMA
+   Transposition Map - REF_A
+   Transposition Map - REF_B
+   Transposition Map - REF_C
+   Transposition Map - REF_B_THIN
+   Transposition Map - REF_C_THIN
+   Transposition Map - REF_ETW
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

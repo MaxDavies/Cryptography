@@ -43,25 +43,27 @@ public class TranspositionRotor implements Transposition {
     //</editor-fold>
         
     //<editor-fold defaultstate="collapsed" desc="Transposition Interface">
-    public TranspositionData transpose(int connection, TranspositionDirection direction) {
+    public TranspositionData transposeConnection(int connection, TranspositionDirection direction) {
         char connectionChar;
-
+        System.out.println("Here");
         if (direction == TranspositionDirection.INPUT){
             connectionChar = this.inputValues.get( (position + connection) % this.inputValues.size());
         } else {
             connectionChar = this.inputValues.get( (position + connection) % this.inputValues.size());
         }
         
-        return transpose(connectionChar, direction);
+        return transposeCharacter(connectionChar, direction);
     }
 
-    public TranspositionData transpose(String value, TranspositionDirection direction) {
+    public TranspositionData transposeCharacter(Character value, TranspositionDirection direction) {
         char result;
         int connector; 
-
+    
         if (direction == TranspositionDirection.INPUT){
             result = (Character)inputMap.get(value);
+//            System.out.printf("Transpose %s = [%s], position [%d]\n", value, result, position);
             connector = (this.inputValues.indexOf(value) + position) % this.inputValues.size();
+            
         } else {
             result = (Character)outputMap.get(value);
             connector = (this.outputValues.indexOf(value) + position) % this.outputValues.size();

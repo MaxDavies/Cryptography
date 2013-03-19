@@ -194,6 +194,10 @@ public class EnigmaRotorTypeTest {
         String model = "Changed Model Value";
         instance.setModel(model);
         assertEquals(model, instance.getModel());
+
+        model = "Commercial Enigma A, B";
+        instance.setModel(model);
+        assertEquals(model, instance.getModel());
     }
 
     /**

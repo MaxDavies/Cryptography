@@ -177,116 +177,129 @@ public class EnigmaRotorTest {
      * Test of getRotorType method, of class EnigmaRotor.
      */
     @Test
-    public void testGetRotorType() {
-//        System.out.println("getRotorType");
-//        EnigmaRotor instance = EnigmaRotor.I;
-//        EnigmaRotorType expResult = null;
-//        EnigmaRotorType result = instance.getRotorType();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-        
-        System.out.println("EnigmaRotor: 'getRotorType' Tests");
+    public void testGetRotorTypes() {
+        System.out.println("EnigmaRotor: 'RotorTypes' Tests");
         System.out.println("=============================+===");
         
         String name = "";
         int failCount = 0;
         
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.I_C, "I_C")){
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.I_C, EnigmaRotorType.COMMERCIAL)){
             failCount++;
         }
         
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.II_C, "II_C")){
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.II_C, EnigmaRotorType.COMMERCIAL)){
             failCount++;
         }
         
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.III_C, "III_C")){
-            failCount++;
-        }
-        
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.I_R, "I_R")){
-            failCount++;
-        }
-        
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.II_R, "II_R")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.III_R, "III_R")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.UKW_R, "UKW_R")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.ETW_R, "ETW_R")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.I_K, "I_K")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.II_K, "II_K")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.III_K, "III_K")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.UKW_K, "UKW_K")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.ETW_K, "ETW_K")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.I, "I")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.II, "II")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.III, "III")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.IV, "IV")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.V, "V")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.VI, "VI")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.VII, "VII")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.VIII, "VIII")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.BETA, "BETA")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.GAMMA, "GAMMA")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_A, "REF_A")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_B, "REF_B")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_C, "REF_C")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_B_THIN, "REF_B_THIN")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_C_THIN, "REF_C_THIN")){
-            failCount++;
-        }
-        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_ETW, "REF_ETW")){
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.III_C, EnigmaRotorType.COMMERCIAL)){
             failCount++;
         }
 
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.I_R, EnigmaRotorType.ROCKET)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.II_R, EnigmaRotorType.ROCKET)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.III_R, EnigmaRotorType.ROCKET)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.UKW_R, EnigmaRotorType.ROCKET)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.ETW_R, EnigmaRotorType.ROCKET)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.I_K, EnigmaRotorType.SWISS_K)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.II_K, EnigmaRotorType.SWISS_K)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.III_K, EnigmaRotorType.SWISS_K)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.UKW_K, EnigmaRotorType.SWISS_K)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.ETW_K, EnigmaRotorType.SWISS_K)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.I, EnigmaRotorType.ENIGMA_1)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.II, EnigmaRotorType.ENIGMA_1)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.III, EnigmaRotorType.ENIGMA_1)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.IV, EnigmaRotorType.M3_ARMY)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.V, EnigmaRotorType.M3_ARMY)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.VI, EnigmaRotorType.M3_M4_NAVAL)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.VII, EnigmaRotorType.M3_M4_NAVAL)){
+            failCount++;
+        }        
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.VIII, EnigmaRotorType.M3_M4_NAVAL)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.BETA, EnigmaRotorType.M4_R2)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.GAMMA, EnigmaRotorType.M4_R2)){
+            failCount++;
+        }
+
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_A, EnigmaRotorType.NONE)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_B, EnigmaRotorType.NONE)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_C, EnigmaRotorType.NONE)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_B_THIN, EnigmaRotorType.M4_R1)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_C_THIN, EnigmaRotorType.M4_R1)){
+            failCount++;
+        }
+        
+        if ( ! testEnigmaRotorRotorType(EnigmaRotor.REF_ETW, EnigmaRotorType.ENIGMA_1)){
+            failCount++;
+        }
         assertEquals(0, failCount);
-        
-        
     }
     
     private boolean testEnigmaRotorRotorType(EnigmaRotor rotor, EnigmaRotorType expected){
@@ -301,17 +314,41 @@ public class EnigmaRotorTest {
         }
     }
     
+    /**
+     * Test of getRotorType method, of class EnigmaRotor.
+     */
+    @Test
+    public void testGetRotorType() {
+        System.out.println("EnigmaRotor: 'getRotorType' Test");
+        System.out.println("=============================+===");
+        
+        EnigmaRotorType expected = EnigmaRotorType.COMMERCIAL;
+        EnigmaRotor rotor = EnigmaRotor.I_C;
+        
+        assertEquals(expected, rotor.getRotorType());
+    }        
 
     /**
      * Test of setRotorType method, of class EnigmaRotor.
      */
     @Test
     public void testSetRotorType() {
-        System.out.println("setRotorType");
-        EnigmaRotorType rotorType = null;
-        EnigmaRotor instance = null;
-        instance.setRotorType(rotorType);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("EnigmaRotor: 'setRotorType' Test");
+        System.out.println("=============================+===");
+        
+        EnigmaRotorType expected = EnigmaRotorType.COMMERCIAL;
+        EnigmaRotor rotor = EnigmaRotor.I_C;
+        
+        assertEquals(expected, rotor.getRotorType());
+
+        expected = EnigmaRotorType.ENIGMA_1;
+        rotor.setRotorType(expected);
+
+        assertEquals(expected, rotor.getRotorType());
+
+        expected = EnigmaRotorType.COMMERCIAL;
+        rotor.setRotorType(expected);
+
+        assertEquals(expected, rotor.getRotorType());
     }
 }
