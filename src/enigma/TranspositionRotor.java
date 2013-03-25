@@ -14,15 +14,21 @@ import java.util.HashMap;
 public class TranspositionRotor implements Transposition {
     
     //<editor-fold defaultstate="collapsed" desc="Methods">
+    
+//    TODO: Consider defining as interface or abstract class, so that the 
+//    rotation funcitonality can be injected (inversion of control)
+    
     /*
      * Rotate the rotor in the direction define by the Direction property 
      * (RotationDirection.FORWARD will increment the rotor position positively, 
      * while RotationDirection.BACKWARD will decrement the the rotor position in
      * the negative direction) and to the number of steps defined by the Steps 
      * property.
+     *
+     * @return the position of the rotor, after the rotation has been applied.
      */
-    public void rotate(){
-        rotate(getDirection(), getSteps());
+    public int rotate(){
+        return rotate(getDirection(), getSteps());
     }
     
     /*
@@ -33,11 +39,13 @@ public class TranspositionRotor implements Transposition {
      * property.
      * @param direction the direction to rotate the rotor
      * @param steps the number of steps to rotate the rotor
+     * @return the position of the rotor, after the rotation has been applied.
      */
-    public void rotate(RotationDirection direction, int steps){
+    public int rotate(RotationDirection direction, int steps){
         for (int i = 0; i < steps; i++) {
             setPosition( direction == RotationDirection.FORWARD ? position++ : position--);
         }
+        return this.position;
     }
     
     //</editor-fold>

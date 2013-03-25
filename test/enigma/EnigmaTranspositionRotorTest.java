@@ -156,9 +156,5 @@ public class EnigmaTranspositionRotorTest {
         
         return failCount;
     }
-
-    
-    
-    
     
 }

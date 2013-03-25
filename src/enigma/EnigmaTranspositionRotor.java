@@ -72,105 +72,13 @@ public class EnigmaTranspositionRotor extends TranspositionRotor {
     public static final char[] REF_B_THIN_TRANS = {'E', 'N', 'K', 'Q', 'A', 'U', 'Y', 'W', 'J', 'I', 'C', 'O', 'P', 'B', 'L', 'M', 'D', 'X', 'Z', 'V', 'F', 'T', 'H', 'R', 'G', 'S'};
     public static final char[] REF_C_THIN_TRANS = {'R', 'D', 'O', 'B', 'J', 'N', 'T', 'K', 'V', 'E', 'H', 'M', 'L', 'F', 'C', 'W', 'Z', 'A', 'X', 'G', 'Y', 'I', 'P', 'S', 'U', 'Q'};
     public static final char[] REF_ETW_TRANS =    {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    
+//    public static final char[] INPUT_BASE_ALPHANUM = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+
     //</editor-fold>
  
     //<editor-fold defaultstate="collapsed" desc="Methods">
-    
-    //        //<editor-fold defaultstate="collapsed" desc="olde code">
-//    private void setEnigmaTranspositionMaps(EnigmaRotor enigmaRotor){
-        //        switch (enigmaRotor){
-        //            case I_C:
-        //                this.setTranspositionMaps(INPUT_BASE, I_C_TRANS);
-        //                break;
-        //            case II_C:
-        //                this.setTranspositionMaps(INPUT_BASE, II_C_TRANS);
-        //                break;
-        //            case III_C:
-        //                this.setTranspositionMaps(INPUT_BASE, III_C_TRANS);
-        //                break;
-        //            case I_R:
-        //                this.setTranspositionMaps(INPUT_BASE, I_R_TRANS);
-        //                break;
-        //            case II_R:
-        //                this.setTranspositionMaps(INPUT_BASE, II_R_TRANS);
-        //                break;
-        //            case III_R:
-        //                this.setTranspositionMaps(INPUT_BASE, III_R_TRANS);
-        //                break;
-        //            case UKW_R:
-        //                this.setTranspositionMaps(INPUT_BASE, UKW_R_TRANS);
-        //                break;
-        //            case ETW_R:
-        //                this.setTranspositionMaps(INPUT_BASE, ETW_R_TRANS);
-        //                break;
-        //            case I_K:
-        //                this.setTranspositionMaps(INPUT_BASE, I_K_TRANS);
-        //                break;
-        //            case II_K:
-        //                this.setTranspositionMaps(INPUT_BASE, II_K_TRANS);
-        //                break;
-        //            case III_K:
-        //                this.setTranspositionMaps(INPUT_BASE, III_K_TRANS);
-        //                break;
-        //            case UKW_K:
-        //                this.setTranspositionMaps(INPUT_BASE, UKW_K_TRANS);
-        //                break;
-        //            case ETW_K:
-        //                this.setTranspositionMaps(INPUT_BASE, ETW_K_TRANS);
-        //                break;
-        //            case I:
-        //                this.setTranspositionMaps(INPUT_BASE, I_TRANS);
-        //                break;
-        //            case II:
-        //                this.setTranspositionMaps(INPUT_BASE, II_TRANS);
-        //                break;
-        //            case III:
-        //                this.setTranspositionMaps(INPUT_BASE, III_TRANS);
-        //                break;
-        //            case IV:
-        //                this.setTranspositionMaps(INPUT_BASE, IV_TRANS);
-        //                break;
-        //            case V:
-        //                this.setTranspositionMaps(INPUT_BASE, V_TRANS);
-        //                break;
-        //            case VI:
-        //                this.setTranspositionMaps(INPUT_BASE, VI_TRANS);
-        //                break;
-        //            case VII:
-        //                this.setTranspositionMaps(INPUT_BASE, VII_TRANS);
-        //                break;
-        //            case VIII:
-        //                this.setTranspositionMaps(INPUT_BASE, VIII_TRANS);
-        //                break;
-        //            case BETA:
-        //                this.setTranspositionMaps(INPUT_BASE, BETA_TRANS);
-        //                break;
-        //            case GAMMA:
-        //                this.setTranspositionMaps(INPUT_BASE, GAMMA_TRANS);
-        //                break;
-        //            case REF_A:
-        //                this.setTranspositionMaps(INPUT_BASE, REF_A_TRANS);
-        //                break;
-        //            case REF_B:
-        //                this.setTranspositionMaps(INPUT_BASE, REF_B_TRANS);
-        //                break;
-        //            case REF_C:
-        //                this.setTranspositionMaps(INPUT_BASE, REF_C_TRANS);
-        //                break;
-        //            case REF_B_THIN:
-        //                this.setTranspositionMaps(INPUT_BASE, REF_B_THIN_TRANS);
-        //                break;
-        //            case REF_C_THIN:
-        //                this.setTranspositionMaps(INPUT_BASE, REF_C_THIN_TRANS);
-        //                break;
-        //            case REF_ETW:
-        //                this.setTranspositionMaps(INPUT_BASE, REF_ETW_TRANS);
-        //                break;
-        //        }
-        //    }
-        //
-        //</editor-fold>
-    
+
     private void setEnigmaTranspositionMaps(EnigmaRotor enigmaRotor){
         this.setTranspositionMaps(INPUT_BASE, getEnigmaRotorTranspositionMap(enigmaRotor));
     }

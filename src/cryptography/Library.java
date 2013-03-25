@@ -70,36 +70,36 @@ public class Library {
     }
 
     /**
-     * Generate random char between a and z
+     * Generate random char between lowercase 'a' and a lowercase 'z'
      *
      * @return
      */
     public static char getRandomLowerCaseLetter() {
-        int CHAR_BASE = 97;
+        int LOWER_CHAR_BASE = 97;
         int CHAR_RANGE = 26;
 
-        return (char) ((int) ((Math.random() * CHAR_RANGE) + CHAR_BASE));
+        return (char) ((int) ((Math.random() * CHAR_RANGE) + LOWER_CHAR_BASE));
     }
 
     /**
-     * Generate random char between a and z
+     * Generate random uppercase char between 'A' and 'Z'
      *
      * @return
      */
     public static char getRandomUpperCaseLetter() {
-        int CHAR_BASE = 97;
+        int UPPER_CHAR_BASE = 65;
         int CHAR_RANGE = 26;
 
-        return (char) ((int) ((Math.random() * CHAR_RANGE) + CHAR_BASE));
+        return (char) ((int) ((Math.random() * CHAR_RANGE) + UPPER_CHAR_BASE));
     }
 
     /**
-     * Generate random integer between 0 and 10
+     * Generate random integer between 0 and 9
      *
      * @return
      */
-    public static int getRandomInteger() {
-        return (int) getRandomInteger(0, 1);
+    public static int getRandomIntegerDigit() {
+        return (int) getRandomInteger(0, 9);
     }
 
     /**
