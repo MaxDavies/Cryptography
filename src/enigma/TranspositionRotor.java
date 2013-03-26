@@ -81,11 +81,19 @@ public class TranspositionRotor implements Transposition {
     }
 
     public char getOutput(char input) {
-        return (Character) inputMap.get(input);
+        try {
+            return (Character) inputMap.get(input);
+        } catch (java.lang.IndexOutOfBoundsException e){
+            return 'A';
+        }
     }
     
     public char getInput(char output) {
-        return (Character) outputMap.get(output);
+        try {
+            return (Character) outputMap.get(output);
+        } catch (java.lang.IndexOutOfBoundsException e){
+            return 'Z';
+        }
     }
     
     public void setTranspositionMaps(char[] inputs, char[] outputs) {
