@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="enigma.EnigmaRotorTest" tests="5" time="0.267" timestamp="2013-03-27T04:52:06">
+<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="enigma.EnigmaRotorTest" tests="5" time="0.288" timestamp="2013-03-27T22:04:28">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -54,7 +54,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaRotorTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaRotorTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher2223020937683481437.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit7130530110862562825.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaRotorTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaRotorTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher4724628930827496973.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit6753423792858834823.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -187,6 +187,7 @@
     <property name="libs.PostgreSQLDriver.javadoc" value="" />
     <property name="libs.restlib.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/asm-3.1.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jackson-core-asl-1.7.1.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jackson-jaxrs-1.7.1.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jackson-mapper-asl-1.7.1.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jackson-xc-1.7.1.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-apache-client-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-atom-abdera-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-client-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-core-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-guice-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-json-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-multipart-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-server-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-simple-server-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jersey-spring-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/jettison-1.1.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/oauth-client-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/oauth-server-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/rest/oauth-signature-1.8.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
     <property name="libs.MySQLDriver.maven-pom" value="" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="libs.junit_4.javadoc" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/docs/junit-4.10-javadoc.jar" />
     <property name="libs.spring-webmvc.javadoc" value="" />
     <property name="libs.EclipseLink-GlassFish-v3.maven-pom" value="" />
@@ -238,6 +239,7 @@
     <property name="meta.inf.dir" value="src/META-INF" />
     <property name="javadoc.encoding.used" value="UTF-8" />
     <property name="dist.jar" value="dist/Cryptography.jar" />
+    <property name="netbeans.automatic.build" value="true" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="Cryptography" />
     <property name="netbeans.hash.code" value="unique=NB_JAVA_WEBCOMMON_WEBEE_GFMOD078e7803b-44c6-48a8-a965-6730660028dc_eba10524-5cb8-4114-b8be-bef5f8d72bbd" />
@@ -286,11 +288,11 @@
     <property name="libs.jaxb.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/jaxb-impl.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/jaxb1-impl.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
     <property name="do.depend" value="false" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
-    <property name="libs.swing-layout.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar" />
     <property name="libs.spring-webmvc3.0.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-webmvc-3.1.1.RELEASE.jar" />
+    <property name="libs.swing-layout.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar" />
     <property name="libs.restlib.src" value="" />
-    <property name="build.generated.dir" value="build/generated" />
     <property name="javac.source" value="1.5" />
+    <property name="build.generated.dir" value="build/generated" />
     <property name="line.separator" value="&#xa;" />
     <property name="libs.hibernate-persistence.src" value="" />
     <property name="java.specification.version" value="1.7" />
@@ -321,10 +323,10 @@
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
     <property name="default.javac.source" value="1.7" />
     <property name="debug-transport-by-os" value="dt_socket" />
-    <property name="libs.MySQLDriver.src" value="" />
     <property name="sun.jnu.encoding" value="US-ASCII" />
-    <property name="build.test.results.dir" value="build/test/results" />
+    <property name="libs.MySQLDriver.src" value="" />
     <property name="java.runtime.version" value="1.7.0_06-b24" />
+    <property name="build.test.results.dir" value="build/test/results" />
     <property name="libs.ejb3-persistence.javadoc" value="" />
     <property name="jna.platform.library.path" value="/usr/lib:/usr/lib" />
     <property name="default.javac.target" value="1.7" />
@@ -342,8 +344,8 @@
     <property name="endorsed.classpath" value="" />
     <property name="libs.absolutelayout.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/AbsoluteLayout.jar" />
     <property name="excludes" value="" />
-    <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.metro.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-api.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-rt.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-tools.jar" />
+    <property name="libs.restlib.maven-pom" value="" />
     <property name="ant.file.type.Cryptography-impl" value="file" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="java.class.path" value="/Users/kevin.lawrence/Documents/Source/Cryptography/build/classes:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar:/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/classes:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/ant/lib/ant-launcher.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/ant/lib/ant.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/ant/lib/ant-junit.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/ant/lib/ant-junit4.jar" />
@@ -358,20 +360,20 @@
     <property name="libs.restlib.javadoc" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/jersey-1.8-javadoc.zip:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/jersey-apache-client-1.8-javadoc.zip:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/jersey-atom-abdera-1.8-javadoc.zip:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/jersey-guice-1.8-javadoc.zip:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/jersey-multipart-1.8-javadoc.zip:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/jersey-simple-server-1.8-javadoc.zip:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/jersey-spring-1.8-javadoc.zip:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/oauth-client-1.8-javadoc.zip:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/oauth-server-1.8-javadoc.zip:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/oauth-signature-1.8-javadoc.zip" />
     <property name="libs.JAXB-ENDORSED.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/api/jaxb-api.jar" />
     <property name="libs.eclipselink.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/eclipselink-2.3.2.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/javax.persistence-2.0.3.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_1.0.1.jar" />
-    <property name="libs.beans-binding.javadoc" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/docs/beansbinding-1.2.1-doc.zip" />
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="libs.beans-binding.javadoc" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/docs/beansbinding-1.2.1-doc.zip" />
     <property name="libs.Java-EE-GlassFish-v3.classpath" value="/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jersey-core.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.servlet.jsp.jstl-api.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.security.jacc.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.resource.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.servlet-api.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.enterprise.deploy.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/webservices-osgi.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.transaction.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.servlet.jsp.jstl.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jaxb-osgi.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.faces.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.persistence.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.servlet.jsp-api.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/endorsed/webservices-api-osgi.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/weld-osgi-bundle.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.mail.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.ejb.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.el-api.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.management.j2ee.jar:/Applications/NetBeans/glassfish-3.1.2.2/mq/lib/jaxm-api.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.security.auth.message.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/bean-validator.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/endorsed/javax.annotation.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/javax.jms.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/web-core.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jackson-core-asl.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jackson-jaxrs.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jackson-mapper-asl.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jersey-client.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jersey-core.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jersey-gf-server.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jersey-json.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jersey-multipart.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/jettison.jar:/Applications/NetBeans/glassfish-3.1.2.2/glassfish/modules/mimepull.jar" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="libs.CopyLibs.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="libs.spring-framework300.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/org-apache-commons-logging.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/cglib-2.2.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-aop-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-asm-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-aspects-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-beans-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-context-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-context-support-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-core-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-expression-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-instrument-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-jdbc-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-jms-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-orm-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-oxm-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-test-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-tx-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-web-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-webmvc-3.1.1.RELEASE.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-struts-3.1.1.RELEASE.jar" />
     <property name="libs.jsp-compiler.maven-pom" value="" />
-    <property name="libs.Java-EE-GlassFish-v3.wsinterop" value="" />
     <property name="libs.spring-webmvc.maven-pom" value="" />
+    <property name="libs.Java-EE-GlassFish-v3.wsinterop" value="" />
     <property name="run.jvmargs" value="" />
-    <property name="libs.ejb3-persistence.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate/ejb3-persistence.jar" />
     <property name="ant.file.Cryptography-impl" value="/Users/kevin.lawrence/Documents/Source/Cryptography/nbproject/build-impl.xml" />
-    <property name="libs.spring-framework.javadoc" value="" />
+    <property name="libs.ejb3-persistence.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate/ejb3-persistence.jar" />
     <property name="libs.JAXB-ENDORSED.src" value="" />
+    <property name="libs.spring-framework.javadoc" value="" />
     <property name="libs.testng.javadoc" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/platform/docs/testng-6.5.1-javadoc.zip" />
     <property name="libs.PostgreSQLDriver.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/postgresql-9.1-901.jdbc4.jar" />
     <property name="libs.jsf12.maven-pom" value="" />
@@ -390,18 +392,12 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
   </properties>
-  <testcase classname="enigma.EnigmaRotorTest" name="testGetRotorType" time="0.003" />
-  <testcase classname="enigma.EnigmaRotorTest" name="testSetRotorType" time="0.0" />
-  <testcase classname="enigma.EnigmaRotorTest" name="testValues" time="0.003" />
-  <testcase classname="enigma.EnigmaRotorTest" name="testValueOf" time="0.004" />
-  <testcase classname="enigma.EnigmaRotorTest" name="testGetRotorTypes" time="0.004" />
-  <system-out><![CDATA[EnigmaRotor: 'getRotorType' Test
-=============================+===
-EnigmaRotor: 'setRotorType' Test
-=============================+===
-EnigmaRotorType: 'values' Tests
-===============================
-EnigmaRotor: 'valueOf' Tests
+  <testcase classname="enigma.EnigmaRotorTest" name="testValueOf" time="0.008" />
+  <testcase classname="enigma.EnigmaRotorTest" name="testGetRotorTypes" time="0.005" />
+  <testcase classname="enigma.EnigmaRotorTest" name="testGetRotorType" time="0.001" />
+  <testcase classname="enigma.EnigmaRotorTest" name="testSetRotorType" time="0.001" />
+  <testcase classname="enigma.EnigmaRotorTest" name="testValues" time="0.002" />
+  <system-out><![CDATA[EnigmaRotor: 'valueOf' Tests
 ================================
  - ValueOf Test : EnigmanRotor = I_C
  - ValueOf Test : EnigmanRotor = II_C
@@ -463,6 +459,12 @@ EnigmaRotor: 'RotorTypes' Tests
  - ValueOf Test : EnigmanRotor = REF_B_THIN
  - ValueOf Test : EnigmanRotor = REF_C_THIN
  - ValueOf Test : EnigmanRotor = REF_ETW
+EnigmaRotor: 'getRotorType' Test
+=============================+===
+EnigmaRotor: 'setRotorType' Test
+=============================+===
+EnigmaRotorType: 'values' Tests
+===============================
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

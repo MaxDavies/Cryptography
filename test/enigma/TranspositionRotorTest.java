@@ -64,6 +64,68 @@ public class TranspositionRotorTest {
         result = rotor.rotate();
         assertEquals(expResult, result);
         
+        
+//                TranspositionRotor rotor = new TranspositionRotor();
+        char[] input = {'A', 'B', 'C'};
+        char[] output = {'D', 'E', 'F'};
+        
+        rotor.setTranspositionMaps(input, output);
+        rotor.setPosition(0);
+        
+        assertEquals(0, rotor.getPosition());
+
+        assertEquals(1, rotor.rotate());
+        assertEquals(1, rotor.getPosition());
+        
+        assertEquals(2, rotor.rotate());
+        assertEquals(2, rotor.getPosition());
+        
+        assertEquals(0, rotor.rotate());
+        assertEquals(0, rotor.getPosition());
+        
+        
+        rotor.setSteps(2);
+        rotor.setPosition(0);
+        assertEquals(0, rotor.getPosition());
+
+        assertEquals(2, rotor.rotate());
+        assertEquals(2, rotor.getPosition());
+        
+        assertEquals(1, rotor.rotate());
+        assertEquals(1, rotor.getPosition());
+        
+        assertEquals(0, rotor.rotate());
+        assertEquals(0, rotor.getPosition());
+        
+        
+        rotor.setDirection(RotationDirection.BACKWARD);
+        rotor.setSteps(1);
+        rotor.setPosition(1);
+
+        assertEquals(1, rotor.getPosition());
+
+        assertEquals(0, rotor.rotate());
+        assertEquals(0, rotor.getPosition());
+        
+        assertEquals(2, rotor.rotate());
+        assertEquals(2, rotor.getPosition());
+        
+        assertEquals(1, rotor.rotate());
+        assertEquals(1, rotor.getPosition());
+        
+        rotor.setSteps(2);
+        rotor.setPosition(0);
+        assertEquals(0, rotor.getPosition());
+
+        assertEquals(1, rotor.rotate());
+        assertEquals(1, rotor.getPosition());
+        
+        assertEquals(2, rotor.rotate());
+        assertEquals(2, rotor.getPosition());
+        
+        assertEquals(0, rotor.rotate());
+        assertEquals(0, rotor.getPosition());
+        
     }
 
     /**
@@ -72,14 +134,43 @@ public class TranspositionRotorTest {
     @Test
     public void testRotate_args() {
         System.out.println("rotate");
-        RotationDirection direction = null;
-        int steps = 0;
-        TranspositionRotor instance = new TranspositionRotor();
-        int expResult = 0;
-        int result = instance.rotate(direction, steps);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        TranspositionRotor rotor = getTestRotor();
+        
+        rotor.setPosition(0);
+        rotor.setSteps(1);
+        rotor.setDirection(RotationDirection.FORWARD);
+
+        assertEquals(2, rotor.rotate(RotationDirection.FORWARD, 2));
+        assertEquals(2, rotor.getPosition());
+
+        assertEquals(5, rotor.rotate(RotationDirection.FORWARD, 3));
+        assertEquals(5, rotor.getPosition());
+
+        assertEquals(9, rotor.rotate(RotationDirection.FORWARD, 4));
+        assertEquals(9, rotor.getPosition());
+
+        
+        assertEquals(8, rotor.rotate(RotationDirection.BACKWARD, 1));
+        assertEquals(8, rotor.getPosition());
+
+        assertEquals(6, rotor.rotate(RotationDirection.BACKWARD, 2));
+        assertEquals(6, rotor.getPosition());
+
+        assertEquals(3, rotor.rotate(RotationDirection.BACKWARD, 3));
+        assertEquals(3, rotor.getPosition());
+
+        assertEquals(25, rotor.rotate(RotationDirection.BACKWARD, 4));
+        assertEquals(25, rotor.getPosition());
+        
+        assertEquals(0, rotor.rotate(RotationDirection.FORWARD, 1));
+        assertEquals(0, rotor.getPosition());
+        
+        assertEquals(2, rotor.rotate(RotationDirection.FORWARD, 54));
+        assertEquals(2, rotor.getPosition());
+        
+        assertEquals(24, rotor.rotate(RotationDirection.BACKWARD, 30));
+        assertEquals(24, rotor.getPosition());
+        
     }
 
     /**
