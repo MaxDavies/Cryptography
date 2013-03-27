@@ -13,7 +13,13 @@ import java.util.HashMap;
  */
 public class TranspositionRotor implements Transposition {
     
-    //<editor-fold defaultstate="collapsed" desc="Methods">
+//    <editor-fold defaultstate="collapsed" desc="Common Transposition Maps">
+    public static final char[] INPUT_BASE_ALPHANUMERIC = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+    public static final char[] INPUT_BASE_ALPHA = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    public static final char[] INPUT_BASE_NUMERIC = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+//    </editor-fold>
+    
+//    <editor-fold defaultstate="collapsed" desc="Methods">
     
 //    TODO: Consider defining as interface or abstract class, so that the 
 //    rotation funcitonality can be injected (inversion of control)
@@ -43,14 +49,13 @@ public class TranspositionRotor implements Transposition {
      */
     public int rotate(RotationDirection direction, int steps){
         for (int i = 0; i < steps; i++) {
-            setPosition( direction == RotationDirection.FORWARD ? position++ : position--);
+            setPosition( direction == RotationDirection.FORWARD ? ++position : --position);
         }
         return this.position;
-    }
-    
-    //</editor-fold>
+    } 
+//    </editor-fold>
         
-    //<editor-fold defaultstate="collapsed" desc="Transposition Interface">
+//    <editor-fold defaultstate="collapsed" desc="Transposition Interface">
     public TranspositionData transposeConnection(int connection, TranspositionDirection direction) {
         char connectionChar;
         System.out.println("Here");
@@ -110,9 +115,9 @@ public class TranspositionRotor implements Transposition {
             outputValues.add(outputs[i]);
         }
     }
-    //</editor-fold>
+//    </editor-fold>
     
-    //<editor-fold defaultstate="collapsed" desc="Constructors">
+//    <editor-fold defaultstate="collapsed" desc="Constructors">
     {
         this.setDirection(RotationDirection.FORWARD);
         this.setSteps(1);
@@ -129,9 +134,9 @@ public class TranspositionRotor implements Transposition {
         this.direction = direction;
         this.steps = steps;
     }
-    //</editor-fold>
+//    </editor-fold>
  
-    //<editor-fold defaultstate="collapsed" desc="Properties">
+//    <editor-fold defaultstate="collapsed" desc="Properties">
     private RotationDirection direction;
     private int steps;
     private int position;
@@ -140,11 +145,23 @@ public class TranspositionRotor implements Transposition {
     private ArrayList<Character> inputValues, outputValues;
     
     /**
+     * @return the size of the rotor
+     */
+    public int getSize() {
+        if (this.inputMap != null){
+            return inputMap.size();
+        } else {
+            return 0;
+        }
+    }
+    
+    /**
      * @return the direction
      */
     public RotationDirection getDirection() {
         return direction;
     }
+    
     
     /**
      * @param direction the direction to set
@@ -194,9 +211,13 @@ public class TranspositionRotor implements Transposition {
         if (position >= 0){
             this.position = position % inputMap.size();
         } else {
-            this.position = inputMap.size() - (position % inputMap.size());
+//            this.position = ((inputMap.size() + position) % inputMap.size());
+            while (position < 0){
+                position += inputMap.size();
+            }
+            this.position = position % inputMap.size();
         }        
     }
-    //</editor-fold>
+//    </editor-fold>
 
 }

@@ -45,15 +45,14 @@ public class EnigmaMachine {
                 rotors.get(output).rotate();
                 cipherChar = rotors.get(output).getInput(cipherChar);
             }
-        
             cipherText += cipherChar;
         }
-        
         
         if (getCts() != null) {
             getCts().send(cipherText);
         }
     }
+    
     //<editor-fold defaultstate="collapsed" desc="Constructors">
 
     {
@@ -69,6 +68,7 @@ public class EnigmaMachine {
         this.rotors = rotors;
     }
     //</editor-fold>
+    
     //<editor-fold defaultstate="collapsed" desc="Properties">
     private ArrayList<EnigmaTranspositionRotor> rotors;
 
