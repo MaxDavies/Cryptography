@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="routeciphertest.RailRouteCipherTest" tests="11" time="0.084" timestamp="2013-03-27T22:04:32">
+<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="routeciphertest.RailRouteCipherTest" tests="11" time="0.096" timestamp="2013-03-27T22:48:41">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -54,7 +54,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner routeciphertest.RailRouteCipherTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-routeciphertest.RailRouteCipherTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher4512843235095861285.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit8294231206984211820.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner routeciphertest.RailRouteCipherTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-routeciphertest.RailRouteCipherTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher1950826028304771759.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit6805509940468930103.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -393,17 +393,17 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
   </properties>
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testEncode_charArrArr_StartPoint" time="0.002" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testEncode_String" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testEncode2" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testDecode_4args" time="0.0" />
-  <testcase classname="routeciphertest.RailRouteCipherTest" name="testDecode_String" time="0.0" />
+  <testcase classname="routeciphertest.RailRouteCipherTest" name="testDecode_String" time="0.002" />
   <testcase classname="routeciphertest.RailRouteCipherTest" name="testGetRows" time="0.0" />
   <testcase classname="routeciphertest.RailRouteCipherTest" name="testSetRows" time="0.0" />
   <testcase classname="routeciphertest.RailRouteCipherTest" name="testGetColumns" time="0.0" />
   <testcase classname="routeciphertest.RailRouteCipherTest" name="testSetColumns" time="0.0" />
   <testcase classname="routeciphertest.RailRouteCipherTest" name="testIsRemoveSpaces" time="0.0" />
   <testcase classname="routeciphertest.RailRouteCipherTest" name="testSetRemoveSpaces" time="0.0" />
+  <testcase classname="routeciphertest.RailRouteCipherTest" name="testEncode_charArrArr_StartPoint" time="0.0" />
+  <testcase classname="routeciphertest.RailRouteCipherTest" name="testEncode_String" time="0.0" />
+  <testcase classname="routeciphertest.RailRouteCipherTest" name="testDecode_4args" time="0.0" />
+  <testcase classname="routeciphertest.RailRouteCipherTest" name="testEncode2" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -64,8 +64,6 @@ public class TranspositionRotorTest {
         result = rotor.rotate();
         assertEquals(expResult, result);
         
-        
-//                TranspositionRotor rotor = new TranspositionRotor();
         char[] input = {'A', 'B', 'C'};
         char[] output = {'D', 'E', 'F'};
         
@@ -148,7 +146,6 @@ public class TranspositionRotorTest {
 
         assertEquals(9, rotor.rotate(RotationDirection.FORWARD, 4));
         assertEquals(9, rotor.getPosition());
-
         
         assertEquals(8, rotor.rotate(RotationDirection.BACKWARD, 1));
         assertEquals(8, rotor.getPosition());
@@ -242,18 +239,25 @@ public class TranspositionRotorTest {
     public void testSetTranspositionMaps() {
         System.out.println("setTranspositionMaps");
 
-        TranspositionRotor instance = new TranspositionRotor();
+        TranspositionRotor rotor = new TranspositionRotor();
 
         char[] inputs = {};
         char[] outputs = {};
-        instance.setTranspositionMaps(inputs, outputs);
-        assertEquals(0, instance.getSize());
+        rotor.setTranspositionMaps(inputs, outputs);
+        assertEquals(0, rotor.getSize());
 
         char[] inputs1 = {'A', 'B', 'C'};
         char[] outputs1 = {'D', 'E', 'F'};
-        instance.setTranspositionMaps(inputs1, outputs1);
-        assertEquals(3, instance.getSize());
+        rotor.setTranspositionMaps(inputs1, outputs1);
+        assertEquals(3, rotor.getSize());
+        
+        assertEquals('D', rotor.getOutput('A'));
+        assertEquals('E', rotor.getOutput('B'));
+        assertEquals('F', rotor.getOutput('C'));
     
+        assertEquals('A', rotor.getInput('D'));
+        assertEquals('B', rotor.getInput('E'));
+        assertEquals('C', rotor.getInput('F'));
     }
 
     /**
@@ -366,9 +370,7 @@ public class TranspositionRotorTest {
 
         reflector = true;
         instance.setReflector(reflector);
-        
         result = instance.isReflector();
-        
         assertEquals(reflector, result);
     }
 
