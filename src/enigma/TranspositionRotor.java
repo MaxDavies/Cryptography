@@ -17,6 +17,9 @@ public class TranspositionRotor implements Transposition {
     public static final char[] INPUT_BASE_ALPHANUMERIC = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
     public static final char[] INPUT_BASE_ALPHA = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
     public static final char[] INPUT_BASE_NUMERIC = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+
+    public static final char[] TEST_BASE_ALPHA = {'D', 'M', 'T', 'W', 'S', 'I', 'L', 'R', 'U', 'Y', 'Q', 'N', 'K', 'F', 'E', 'J', 'C', 'A', 'Z', 'B', 'P', 'G', 'X', 'O', 'H', 'V'};
+    
 //    </editor-fold>
     
 //    <editor-fold defaultstate="collapsed" desc="Methods">
@@ -70,14 +73,14 @@ public class TranspositionRotor implements Transposition {
      *     then the input connector will be '0', if 'B', then '1'.
      *     
      *  2) For each transposition rotor, the input connection value will be on
-     *     the "absolute" position, and will therefore, for the purposes of 
+     *     the "external" position, and will therefore, for the purposes of 
      *     transposition to the next rotor, need to be adjusted based on the 
      *     rotors position. Note that the interpretaton of the "position" is 
      *     that incrementing the position will move the transposition map 
-     *     elements forward one "absolute" position, as shown below:
+     *     elements forward one "external" position, as shown below:
      * 
      *                               Internal
-     *                                   Absolute 
+     *                                   External 
      *     Rotor position = 0    A   0   0
      *                           B   1   1
      *                           C   2   2
@@ -113,21 +116,48 @@ public class TranspositionRotor implements Transposition {
      */
     
     
+    /**
+     * @return the internal connection corrected for the position (rotation) of 
+     * the rotor.
+     * 
+     * @param externalConnection this is the connection to the rotor as seen  
+     * externally, i.e. by the transposition machine. External connection points
+     * are effectively "constant", and identical across all rotors: they are the 
+     * connection between rotors. They are "constant" in that the interface
+     * points between rotors do not change when any of the rotors rotate:
+     * connection "0" will always be at the top/first position of the machine.
+     * 
+     * This "externalConnection" must be corrected/adjusted for the position 
+     * (rotation) of the rotor, in order to figure out which "input" character
+     * will be used to compute a transposition to the "output" character. From
+     * this "internal output" character, we can derive an internal output 
+     * connection; in order to connect to the next transposition rotor, the
+     * internal value is again corrected to an external value using the 
+     * getExternalConnection method.
+     */
+    public int getInternalConnection(int externalConnection){
+        return ((externalConnection - position) + this.inputValues.size()) % this.inputValues.size();
+    }
+    
+    /**
+     * @return the external connection corrected for the position (rotation) of 
+     * the rotor.
+     * 
+     * @param internalConnection this is the connection from the rotor as seen  
+     * internally. In order to connect to the next transposition rotor, the
+     * internal value are corrected to an external value.
+     */
+    public int getExternalConnection(int internalConnection){
+        return (internalConnection + position) % inputValues.size();
+    }
     
     
-    public int transpose(int connection, TranspositionDirection direction) {
-        char connectionChar;
-        int index, output;
+    public int transpose(int externalConnection, TranspositionDirection direction) {
+        int internalInputConnection, internalOutputConnection;
         
         //correct absolute connection for current position
-        if (direction == TranspositionDirection.INPUT){
-//            connectionChar = this.inputValues.get( (connection - position) % this.inputValues.size());
-            index = ((connection - position) + this.inputValues.size()) % this.inputValues.size();
-        } else {
-//            connectionChar = this.inputValues.get( (connection - position) % this.inputValues.size());
-            connectionChar = this.inputValues.get( (connection - position) % this.inputValues.size());
-        }
-
+        internalInputConnection = getInternalConnection(externalConnection);
+        
        /*
         *  We know the connection index, so get the "transposition" char from
         *  the output values, and then use that character to get the outbound
@@ -135,14 +165,31 @@ public class TranspositionRotor implements Transposition {
         *  in the input index.
         * 
         */
+        if (direction == TranspositionDirection.INPUT){
+            /*  Since have [1] internal input connection (points to the position
+             *  of the input transposition character), the associated output
+             *  character [2] will be located in the outputValues structure in
+             *  the same position.
+             *  In order to get the internal output connection [3], we go back
+             *  to the inputValues structure, and find the position of the 
+             *  output character.  If we did not do this, i.e. if we relied on
+             *  the position of the output character in the outputValues 
+             *  strucutre, we would essentially get a direct (no connection
+             *  position change) for every transposition, as the input value and 
+             *  output (transposed) values are located in hte same position in 
+             *  the inputValues and outputValues data structures.
+             */
+            
+//                                                         [2] transposition character (output) 
+//                                                                          [1] input connection
+            internalOutputConnection = inputValues.indexOf(outputValues.get(internalInputConnection));
+        } else {
+            char f = outputValues.get(internalInputConnection);
+            internalOutputConnection = inputValues.indexOf(inputValues.get(internalInputConnection));
+        }
         
-        output = inputValues.indexOf(outputValues.get(index));
-        
-        // now correct the output for the rotation
-        
-        output = (output + position) % inputValues.size();
-        
-        return output;
+        // correct the result for the position
+        return getExternalConnection(internalOutputConnection);
     }
 
     public TranspositionData transposeConnection(int connection, TranspositionDirection direction) {
