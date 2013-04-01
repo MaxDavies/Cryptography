@@ -85,6 +85,8 @@ public class EnigmaTranspositionRotor extends TranspositionRotor {
     
     public static char[] getEnigmaRotorTranspositionMap(EnigmaRotor enigmaRotor){
         switch (enigmaRotor){
+            case INTERFACE:
+                return INPUT_BASE;
             case I_C:
                 return I_C_TRANS;
             case II_C:

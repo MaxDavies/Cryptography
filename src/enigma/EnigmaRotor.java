@@ -12,6 +12,8 @@ package enigma;
 
 //TODO: Refactor all this back into EnigmaRotorType, (and expose a factory there, or  "subset" functionality?)
 public enum EnigmaRotor {
+
+    INTERFACE(EnigmaRotorType.NONE),
     I_C(EnigmaRotorType.COMMERCIAL), II_C(EnigmaRotorType.COMMERCIAL), III_C(EnigmaRotorType.COMMERCIAL), 
     I_R(EnigmaRotorType.ROCKET), II_R(EnigmaRotorType.ROCKET), III_R(EnigmaRotorType.ROCKET), UKW_R(EnigmaRotorType.ROCKET), ETW_R(EnigmaRotorType.ROCKET), 
     I_K(EnigmaRotorType.SWISS_K), II_K(EnigmaRotorType.SWISS_K), III_K(EnigmaRotorType.SWISS_K), UKW_K(EnigmaRotorType.SWISS_K), ETW_K(EnigmaRotorType.SWISS_K), 

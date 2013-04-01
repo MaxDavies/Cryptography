@@ -11,7 +11,9 @@ import java.util.ArrayList;
  * @author kevin.lawrence
  */
 public class EnigmaMachine {
-
+    private TranspositionRotor interfaceRotor;
+    
+    
     public class CipherTextSink {
 
         public void send(String cipherText) {
@@ -32,11 +34,17 @@ public class EnigmaMachine {
     private void encipher(String plainText) {
         String cipherText = "";
         char cipherChar;
+        int connection;
         
         for (int i = 0; i < plainText.length(); i++) {
             cipherChar = plainText.charAt(i);
             
+            //get interface connection position
+            connection = interfaceRotor.transposeCharacter(cipherChar, TranspositionDirection.INPUT).getConnection();
+            
             for (int input = 0; input < rotors.size(); input++) {
+                cipherChar = rotors.get(input).transposeConnection(connection, TranspositionDirection.INPUT).getValue();
+                
                 cipherChar = rotors.get(input).getOutput(cipherChar);
                 rotors.get(input).rotate();
             }
@@ -57,6 +65,8 @@ public class EnigmaMachine {
 
     {
         rotors = new ArrayList<EnigmaTranspositionRotor>();
+        interfaceRotor = new EnigmaTranspositionRotor(EnigmaRotor.INTERFACE);
+        
         this.setCts(new CipherTextSink());
         this.setPts(new PlainTextSource());
     }
