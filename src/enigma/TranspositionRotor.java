@@ -180,12 +180,16 @@ public class TranspositionRotor implements Transposition {
              *  the inputValues and outputValues data structures.
              */
             
-//                                                         [2] transposition character (output) 
-//                                                                          [1] input connection
+            /*                         [3] internal output connection position
+             *                                            [2] transposition character (output) 
+             *                                                              [1] input connection
+             */ 
             internalOutputConnection = inputValues.indexOf(outputValues.get(internalInputConnection));
         } else {
-            char f = outputValues.get(internalInputConnection);
-            internalOutputConnection = inputValues.indexOf(inputValues.get(internalInputConnection));
+            /*                         [3] internal output connection position
+             *                                            [2] transposition character (output) 
+             *                                                              [1] input connection  */ 
+            internalOutputConnection = outputValues.indexOf(inputValues.get(internalInputConnection));
         }
         
         // correct the result for the position
