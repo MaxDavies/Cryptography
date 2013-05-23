@@ -13,15 +13,15 @@ public class TranspositionData {
     //<editor-fold defaultstate="collapsed" desc="Constructors">
     public TranspositionData(){ }
     
-    public TranspositionData(char value, int connection){
+    public TranspositionData(char value, int internalConnection){
         this.value = value;
-        this.connection = connection;
+        this.internalConnection = internalConnection;
     }
     //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="Properties">
     private char value;
-    private int connection;
+    private int internalConnection;
     
     /**
      * @return the value
@@ -38,17 +38,19 @@ public class TranspositionData {
     }
     
     /**
-     * @return the connection
+     * @return the internal connection, i.e. not corrected for the position of 
+     * the rotor
      */
-    public int getConnection() {
-        return connection;
+    public int getInternalConnection() {
+        return internalConnection;
     }
     
     /**
-     * @param connection the connection to set
+     * @param connection the internal connection to set, i.e. the connection has
+     * not been corrected for the position of the rotor
      */
-    public void setConnection(int connection) {
-        this.connection = connection;
+    public void setInternalConnection(int internalConnection) {
+        this.internalConnection = internalConnection;
     }
     //</editor-fold>
     

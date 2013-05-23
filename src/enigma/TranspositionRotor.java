@@ -152,7 +152,23 @@ public class TranspositionRotor implements Transposition {
     }
     
     
-    public int transpose(int externalConnection, TranspositionDirection direction) {
+    /**
+     * @return the external connection point - corrected for the position 
+     * (rotation) of the rotor - of the transposed input connection point.
+     * 
+     * @param externalConnection this is the connection from the rotor as seen  
+     * externally. Note that in order to compute the transposition, the
+     * external value is corrected - based on the position (rotation) - to 
+     * an internal connection value, then run through the transposition maps, 
+     * and re-corrected for the output external connection point.
+     * 
+     * @param direction this is the TranspositionDirection (either INPUT or 
+     * OUTPUT) of the transposition request.  An INPUT request will use the 
+     * INPUT TranspositionMap as the starting point for the transposition 
+     * process, while an OUTPUT request will reverse the path through the 
+     * maps.
+     */
+    public int transposeToExternalConnection(int externalConnection, TranspositionDirection direction) {
         int internalInputConnection, internalOutputConnection;
         
         //correct absolute connection for current position
@@ -196,35 +212,33 @@ public class TranspositionRotor implements Transposition {
         return getExternalConnection(internalOutputConnection);
     }
 
-    public TranspositionData transposeConnection(int connection, TranspositionDirection direction) {
-        char connectionChar;
-        System.out.println("Here");
-        if (direction == TranspositionDirection.INPUT){
-            connectionChar = this.inputValues.get( (connection - position) % this.inputValues.size());
-        } else {
-            connectionChar = this.inputValues.get( (connection - position) % this.inputValues.size());
-        }
-        
-        return transposeCharacter(connectionChar, direction);
+    public char transposeExternalConnectionToCharacter(int externalConnection, TranspositionDirection direction) {
+        return transposeInternalConnectionToCharacter(getInternalConnection(externalConnection), direction);
     }
-
-    public TranspositionData transposeCharacter(Character value, TranspositionDirection direction) {
-        char result;
-        int connector; 
     
-        if (direction == TranspositionDirection.INPUT){
-            result = (Character)inputMap.get(value);
-//            System.out.printf("Transpose %s = [%s], position [%d]\n", value, result, position);
-            connector = (this.inputValues.indexOf(value) + position) % this.inputValues.size();
-            
-        } else {
-            result = (Character)outputMap.get(value);
-            connector = (this.outputValues.indexOf(value) + position) % this.outputValues.size();
-        }
-        
-        return new TranspositionData(result, connector);
+    public char transposeInternalConnectionToCharacter(int internalConnection, TranspositionDirection direction) {
+        return (direction == TranspositionDirection.INPUT) ? inputValues.get(internalConnection) : outputValues.get(internalConnection);
     }
+    
+//    public TranspositionData transposeCharacter(Character value, TranspositionDirection direction) {
+//        throw new UnsupportedOperationException("Not supported yet.");
+//    }
 
+    //<editor-fold defaultstate="collapsed" desc="Deprecated">
+//    public TranspositionData transposeConnection(int connection, TranspositionDirection direction) {
+//        char connectionChar;
+//        System.out.println("Here");
+//        if (direction == TranspositionDirection.INPUT){
+//            connectionChar = this.inputValues.get( (connection - position) % this.inputValues.size());
+//        } else {
+//            connectionChar = this.inputValues.get( (connection - position) % this.inputValues.size());
+//        }
+//        
+//        return transposeCharacter(connectionChar, direction);
+//    }
+//    
+    //</editor-fold>
+    
     public char getOutput(char input) {
         try {
             return (Character) inputMap.get(input);

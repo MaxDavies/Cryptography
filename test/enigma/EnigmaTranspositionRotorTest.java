@@ -86,7 +86,7 @@ public class EnigmaTranspositionRotorTest {
     }
     
     /**
-     * Test of transpose method, of class EnigmaTranspositionRotor.
+     * Test of transposeExternalConnection method, of class EnigmaTranspositionRotor.
      */
     @Test
     public void testTranposeCharacter() {
@@ -114,7 +114,7 @@ public class EnigmaTranspositionRotorTest {
     }
     
         /**
-     * Test of transpose method, of class EnigmaTranspositionRotor.
+     * Test of transposeExternalConnection method, of class EnigmaTranspositionRotor.
      */
     @Test
     public void testEnigmaTranpostionMaps() {

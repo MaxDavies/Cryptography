@@ -34,25 +34,25 @@ public class EnigmaMachine {
     private void encipher(String plainText) {
         String cipherText = "";
         char cipherChar;
-        int connection;
+        int externalConnection;
         
         for (int i = 0; i < plainText.length(); i++) {
             cipherChar = plainText.charAt(i);
             
             //get interface connection position
-            connection = interfaceRotor.transposeCharacter(cipherChar, TranspositionDirection.INPUT).getConnection();
+            externalConnection = interfaceRotor.getExternalConnection( interfaceRotor.transposeCharacter(cipherChar, TranspositionDirection.INPUT).getInternalConnection());
             
             for (int input = 0; input < rotors.size(); input++) {
-                cipherChar = rotors.get(input).transposeConnection(connection, TranspositionDirection.INPUT).getValue();
-                
-                cipherChar = rotors.get(input).getOutput(cipherChar);
-                rotors.get(input).rotate();
+                externalConnection = rotors.get(input).transposeToExternalConnection(externalConnection, TranspositionDirection.INPUT);
             }
             
             for (int output = rotors.size() - 1; output >= 0; output++) {
-                rotors.get(output).rotate();
-                cipherChar = rotors.get(output).getInput(cipherChar);
+                externalConnection = rotors.get(output).transposeToExternalConnection(externalConnection, TranspositionDirection.OUTPUT);
             }
+            
+            externalConnection = interfaceRotor.getExternalConnection( interfaceRotor.transposeCharacter(cipherChar, TranspositionDirection.OUTPUT).getInternalConnection());
+            
+            
             cipherText += cipherChar;
         }
         
