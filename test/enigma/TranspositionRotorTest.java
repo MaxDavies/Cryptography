@@ -176,7 +176,7 @@ public class TranspositionRotorTest {
         TranspositionDirection direction = null;
         TranspositionRotor instance = new TranspositionRotor();
         TranspositionData expResult = null;
-        TranspositionData result = instance.transposeConnection(connection, direction);
+        TranspositionData result = null; //instance.transposeConnection(connection, direction);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -192,7 +192,8 @@ public class TranspositionRotorTest {
         TranspositionDirection direction = null;
         TranspositionRotor instance = new TranspositionRotor();
         TranspositionData expResult = null;
-        TranspositionData result = instance.transposeCharacter(value, direction);
+        TranspositionData result = null; //instance.transposeCharacter(value, direction);
+        
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

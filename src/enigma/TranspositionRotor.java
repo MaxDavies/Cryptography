@@ -179,13 +179,13 @@ public class TranspositionRotor implements Transposition {
         *  the output values, and then use that character to get the outbound
         *  connection (unadjusted) from the index of the transposition char 
         *  in the input index.
-        * 
         */
         if (direction == TranspositionDirection.INPUT){
             /*  Since have [1] internal input connection (points to the position
              *  of the input transposition character), the associated output
              *  character [2] will be located in the outputValues structure in
              *  the same position.
+             * 
              *  In order to get the internal output connection [3], we go back
              *  to the inputValues structure, and find the position of the 
              *  output character.  If we did not do this, i.e. if we relied on
@@ -211,6 +211,7 @@ public class TranspositionRotor implements Transposition {
         // correct the result for the position
         return getExternalConnection(internalOutputConnection);
     }
+    
 
     public char transposeExternalConnectionToCharacter(int externalConnection, TranspositionDirection direction) {
         return transposeInternalConnectionToCharacter(getInternalConnection(externalConnection), direction);

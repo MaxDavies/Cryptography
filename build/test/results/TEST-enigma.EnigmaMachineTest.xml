@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="2" failures="2" hostname="macbookKWL.local" name="enigma.TranspositionRotorTest" tests="15" time="0.17" timestamp="2013-05-24T15:15:26">
+<testsuite errors="1" failures="0" hostname="macbookKWL.local" name="enigma.EnigmaMachineTest" tests="1" time="0.98" timestamp="2013-05-24T15:15:21">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -55,7 +55,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.TranspositionRotorTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.TranspositionRotorTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher3670475027717187325.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit2603690203433282406.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaMachineTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaMachineTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher8408533311581936632.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit3977198491725135152.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -236,7 +236,6 @@
     <property name="org.openide.major.version" value="IDE/1" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
     <property name="netbeans.user" value="/Users/kevin.lawrence/Library/Application Support/NetBeans/7.2" />
-    <property name="tests.failed" value="true" />
     <property name="javadoc.additionalparam" value="" />
     <property name="jnlp.offline-allowed" value="false" />
     <property name="java.io.tmpdir" value="/var/folders/42/mxjnwgmx7vxfrdkp6hhkxvshh_lp6q/T/" />
@@ -306,8 +305,8 @@
     <property name="libs.JFormDesigner-IntelliJIDEAGridLayout.maven-pom" value="" />
     <property name="do.depend" value="false" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
-    <property name="libs.swing-layout.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar" />
     <property name="libs.spring-webmvc3.0.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-webmvc-3.1.1.RELEASE.jar" />
+    <property name="libs.swing-layout.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar" />
     <property name="libs.restlib.src" value="" />
     <property name="javac.source" value="1.5" />
     <property name="build.generated.dir" value="build/generated" />
@@ -315,8 +314,8 @@
     <property name="line.separator" value="&#xa;" />
     <property name="libs.hibernate-persistence.src" value="" />
     <property name="java.specification.version" value="1.7" />
-    <property name="libs.jaxws21.maven-pom" value="" />
     <property name="java.vm.info" value="mixed mode" />
+    <property name="libs.jaxws21.maven-pom" value="" />
     <property name="nb.junit.batch" value="true" />
     <property name="junit.forkmode" value="perTest" />
     <property name="libs.JFormDesigner-Annotations.javadoc" value="/Users/kevin.lawrence/Library/Application Support/NetBeans/7.2/redist/jfd-annotations-javadoc.zip" />
@@ -346,20 +345,20 @@
     <property name="default.javac.source" value="1.7" />
     <property name="libs.JFormDesigner-FormLayout.maven-pom" value="" />
     <property name="debug-transport-by-os" value="dt_socket" />
-    <property name="libs.MySQLDriver.src" value="" />
     <property name="sun.jnu.encoding" value="US-ASCII" />
-    <property name="build.test.results.dir" value="build/test/results" />
+    <property name="libs.MySQLDriver.src" value="" />
     <property name="java.runtime.version" value="1.7.0_06-b24" />
+    <property name="build.test.results.dir" value="build/test/results" />
     <property name="libs.ejb3-persistence.javadoc" value="" />
     <property name="jna.platform.library.path" value="/usr/lib:/usr/lib" />
     <property name="default.javac.target" value="1.7" />
-    <property name="libs.Java-EE-GlassFish-v3.src" value="" />
     <property name="libs.junit_4.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar" />
+    <property name="libs.Java-EE-GlassFish-v3.src" value="" />
     <property name="user.timezone" value="" />
     <property name="nb.junit.single" value="false" />
     <property name="do.jar" value="true" />
-    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="netbeans.dirs" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/nb:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ergonomics:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/apisupport:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/webcommon:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/websvccommon:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/mobility:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/profiler:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/python:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/php:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/identity:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/harness:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/cnd:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/dlight:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/groovy:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/extra:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/javacard:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/javafx:" />
     <property name="libs.jsf20.javadoc" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/docs/javaee6-doc-api.zip" />
     <property name="java.ext.dirs" value="/Users/kevin.lawrence/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_06.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
@@ -367,11 +366,11 @@
     <property name="endorsed.classpath" value="" />
     <property name="libs.absolutelayout.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/AbsoluteLayout.jar" />
     <property name="excludes" value="" />
-    <property name="libs.metro.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-api.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-rt.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-tools.jar" />
     <property name="libs.restlib.maven-pom" value="" />
+    <property name="libs.metro.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-api.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-rt.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-tools.jar" />
     <property name="ant.file.type.Cryptography-impl" value="file" />
-    <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="java.class.path" value="/Users/kevin.lawrence/Documents/Source/Cryptography/build/classes:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar:/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/classes:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/ant/lib/ant-launcher.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/ant/lib/ant.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/ant/lib/ant-junit.jar:/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/ant/lib/ant-junit4.jar" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="do.mkdist" value="true" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="/Applications/NetBeans/NetBeans 7.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/javax.persistence-2.0.3.jar" />
@@ -417,54 +416,100 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
   </properties>
-  <testcase classname="enigma.TranspositionRotorTest" name="testRotate_no_args" time="0.006" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testRotate_args" time="0.0" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testTransposeConnection" time="0.01">
-    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
-	at enigma.TranspositionRotorTest.testTransposeConnection(TranspositionRotorTest.java:182)
-</failure>
-  </testcase>
-  <testcase classname="enigma.TranspositionRotorTest" name="testTransposeCharacter" time="0.003">
-    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
-	at enigma.TranspositionRotorTest.testTransposeCharacter(TranspositionRotorTest.java:199)
-</failure>
-  </testcase>
-  <testcase classname="enigma.TranspositionRotorTest" name="testGetOutput" time="0.015">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at enigma.TranspositionRotor.getOutput(TranspositionRotor.java:245)
-	at enigma.TranspositionRotorTest.testGetOutput(TranspositionRotorTest.java:211)
+  <testcase classname="enigma.EnigmaMachineTest" name="testEnigma" time="0.022">
+    <error message="String index out of range: 28" type="java.lang.StringIndexOutOfBoundsException">java.lang.StringIndexOutOfBoundsException: String index out of range: 28
+	at java.lang.String.charAt(String.java:658)
+	at enigma.EnigmaMachine.encipher(EnigmaMachine.java:44)
+	at enigma.EnigmaMachineTest.testEnigma(EnigmaMachineTest.java:52)
 </error>
   </testcase>
-  <testcase classname="enigma.TranspositionRotorTest" name="testGetInput" time="0.003">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at enigma.TranspositionRotor.getInput(TranspositionRotor.java:253)
-	at enigma.TranspositionRotorTest.testGetInput(TranspositionRotorTest.java:226)
-</error>
-  </testcase>
-  <testcase classname="enigma.TranspositionRotorTest" name="testSetTranspositionMaps" time="0.001" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testGetDirection" time="0.0" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testSetDirection" time="0.0" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testGetSteps" time="0.001" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testSetSteps" time="0.001" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testIsReflector" time="0.001" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testSetReflector" time="0.0" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testGetPosition" time="0.0" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testSetPosition" time="0.001" />
-  <system-out><![CDATA[rotate
-rotate
-transposeConnection
-transposeCharacter
-getOutput
-getInput
-setTranspositionMaps
-getDirection
-setDirection
-getSteps
-setSteps
-isReflector
-setReflector
-getPosition
-setPosition
+  <system-out><![CDATA[testEnigma
+Plain Text = 
+Two can keep a secret if one is dead
+External Interface Rotor
+  POSN = 0 PT = T CNX = 19
+CT = T
+External Interface Rotor
+  POSN = 1 PT = W CNX = 22
+CT = W
+External Interface Rotor
+  POSN = 2 PT = O CNX = 14
+CT = O
+External Interface Rotor
+  POSN = 3 PT = C CNX = 2
+CT = C
+External Interface Rotor
+  POSN = 4 PT = A CNX = 0
+CT = A
+External Interface Rotor
+  POSN = 5 PT = N CNX = 13
+CT = N
+External Interface Rotor
+  POSN = 6 PT = K CNX = 10
+CT = K
+External Interface Rotor
+  POSN = 7 PT = E CNX = 4
+CT = E
+External Interface Rotor
+  POSN = 8 PT = E CNX = 4
+CT = E
+External Interface Rotor
+  POSN = 9 PT = P CNX = 15
+CT = P
+External Interface Rotor
+  POSN = 10 PT = A CNX = 0
+CT = A
+External Interface Rotor
+  POSN = 11 PT = S CNX = 18
+CT = S
+External Interface Rotor
+  POSN = 12 PT = E CNX = 4
+CT = E
+External Interface Rotor
+  POSN = 13 PT = C CNX = 2
+CT = C
+External Interface Rotor
+  POSN = 14 PT = R CNX = 17
+CT = R
+External Interface Rotor
+  POSN = 15 PT = E CNX = 4
+CT = E
+External Interface Rotor
+  POSN = 16 PT = T CNX = 19
+CT = T
+External Interface Rotor
+  POSN = 17 PT = I CNX = 8
+CT = I
+External Interface Rotor
+  POSN = 18 PT = F CNX = 5
+CT = F
+External Interface Rotor
+  POSN = 19 PT = O CNX = 14
+CT = O
+External Interface Rotor
+  POSN = 20 PT = N CNX = 13
+CT = N
+External Interface Rotor
+  POSN = 21 PT = E CNX = 4
+CT = E
+External Interface Rotor
+  POSN = 22 PT = I CNX = 8
+CT = I
+External Interface Rotor
+  POSN = 23 PT = S CNX = 18
+CT = S
+External Interface Rotor
+  POSN = 24 PT = D CNX = 3
+CT = D
+External Interface Rotor
+  POSN = 25 PT = E CNX = 4
+CT = E
+External Interface Rotor
+  POSN = 26 PT = A CNX = 0
+CT = A
+External Interface Rotor
+  POSN = 27 PT = D CNX = 3
+CT = D
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
