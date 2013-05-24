@@ -4,8 +4,8 @@
  */
 package enigma;
 
-import enigma.EnigmaMachine.CipherTextSink;
-import enigma.EnigmaMachine.PlainTextSource;
+import enigma.EnigmaMachine.TextSink;
+import enigma.EnigmaMachine.TextSource;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -55,13 +55,12 @@ public class EnigmaMachineTest {
         rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.III));
         
         EnigmaMachine instance = new EnigmaMachine(rotors);
-        instance.encipher("Two can keep a secret if one is dead");
-        
+        System.out.println("ghghghghghghghghgh");
+        String cipherText = instance.encipher("Two can keep a secret if one is dead");
+        System.out.println("=======================================================");
+        String decipheredText = instance.decipher(cipherText);
 
         assertEquals(true, true);
-//        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
     
     
@@ -117,8 +116,8 @@ public class EnigmaMachineTest {
 //    public void testGetCts() {
 //        System.out.println("getCts");
 //        EnigmaMachine instance = new EnigmaMachine();
-//        CipherTextSink expResult = null;
-//        CipherTextSink result = instance.getCts();
+//        TextSink expResult = null;
+//        TextSink result = instance.getCts();
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -130,7 +129,7 @@ public class EnigmaMachineTest {
 //    @Test
 //    public void testSetCts() {
 //        System.out.println("setCts");
-//        CipherTextSink cts = null;
+//        TextSink cts = null;
 //        EnigmaMachine instance = new EnigmaMachine();
 //        instance.setCts(cts);
 //        // TODO review the generated test code and remove the default call to fail.
@@ -144,8 +143,8 @@ public class EnigmaMachineTest {
 //    public void testGetPts() {
 //        System.out.println("getPts");
 //        EnigmaMachine instance = new EnigmaMachine();
-//        PlainTextSource expResult = null;
-//        PlainTextSource result = instance.getPts();
+//        TextSource expResult = null;
+//        TextSource result = instance.getPts();
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -157,7 +156,7 @@ public class EnigmaMachineTest {
 //    @Test
 //    public void testSetPts() {
 //        System.out.println("setPts");
-//        PlainTextSource pts = null;
+//        TextSource pts = null;
 //        EnigmaMachine instance = new EnigmaMachine();
 //        instance.setPts(pts);
 //        // TODO review the generated test code and remove the default call to fail.
