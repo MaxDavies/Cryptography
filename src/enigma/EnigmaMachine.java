@@ -13,25 +13,22 @@ import java.util.ArrayList;
 public class EnigmaMachine {
     
     //<editor-fold defaultstate="collapsed" desc="Source / Sink">
-    public class CipherTextSink {
+    public class TextSink {
         
-        public void send(String cipherText) {
-            System.out.printf("Enciphered = %s\n", cipherText);
+        public void send(String text) {
+            System.out.printf("Output = %s\n", text);
         }
     }
     
-    public class PlainTextSource {
+    public class TextSource {
         
-        public void receive(String plainText) {
-            System.out.printf("Plain text = %s\n", plainText);
-            
-            encipher(plainText);
-            
+        public void receive(String text) {
+            System.out.printf("Input = %s", text);
         }
     }
     //</editor-fold>
 
-    public void encipher(String plainText) {
+    public String encipher(String plainText) {
         String cipherText = "";
         char cipherChar;
         int externalConnection;
@@ -39,7 +36,7 @@ public class EnigmaMachine {
         
         System.out.println("Plain Text = \n" + plainText);
         
-        for (int i = 0; i < plainText.length(); i++) {
+        for (int i = 0; i < text.length(); i++) {
             cipherChar = text.charAt(i);
             
             //get interface connection position
@@ -47,8 +44,6 @@ public class EnigmaMachine {
             externalConnection = fixedInterfaceRotor.getExternalConnection(cipherChar);
             System.out.println("External Interface Rotor");
             System.out.printf("  PT: %s (%d) XCNX: %d\n", cipherChar, i, externalConnection);
-            
-            
             
             int rotorNumber = 0;
             // "Inbound" transposition
@@ -81,7 +76,58 @@ public class EnigmaMachine {
         if (getCts() != null) {
             getCts().send(cipherText);
         }
+        return cipherText;
     }
+    
+    public String decipher(String cipherText) {
+        String plaintText = "";
+        char plainChar;
+        int externalConnection;
+        String text = (cipherText.replaceAll(" ", "")).toUpperCase();       
+        System.out.println("-------------------------------------------------");
+        System.out.println("Cipher Text = \n" + cipherText);
+        
+//        for (int i = 0; i < cipherText.length(); i++) {
+        for (int i = 0; i < text.length(); i++) {
+            plainChar = text.charAt(i);
+            
+            //get interface connection position
+            externalConnection = fixedInterfaceRotor.getExternalConnection(plainChar);
+            System.out.println("External Interface Rotor");
+            System.out.printf("  CT: %s (%d) XCNX: %d\n", plainChar, i, externalConnection);
+            
+            int rotorNumber = 0;
+            // "Inbound" transposition
+            for (EnigmaTranspositionRotor rotor : rotors) {
+                System.out.printf("  IN: Transposition Rotor #%d Type: %s Posn: %d\n", rotorNumber, rotor.getEnigmaRotor().getRotorType(), rotor.getPosition());
+                System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.OUTPUT);
+                System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                rotorNumber++;
+            }
+            
+            // "Outbound" transposition
+            EnigmaTranspositionRotor rotor;
+            for (rotorNumber--; rotorNumber >= 0 ; rotorNumber--) {
+                rotor = rotors.get(rotorNumber);
+                System.out.printf("  OUT: Transposition Rotor #%d Type: %s Posn: %d\n", rotorNumber, rotor.getEnigmaRotor().getRotorType(), rotor.getPosition());
+                System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.OUTPUT);
+                System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+            }
+            
+            plainChar= fixedInterfaceRotor.getCharacter(externalConnection);
+            plaintText += plainChar;
+            System.out.println("PC = " + plainChar);
+            System.out.println("PT = " + plaintText);
+        }
+        
+        if (getCts() != null) {
+            getCts().send(plaintText);
+        }
+        
+        return plaintText;
+    }  
     
     //<editor-fold defaultstate="collapsed" desc="Constructors">
 
@@ -89,8 +135,8 @@ public class EnigmaMachine {
         rotors = new ArrayList<EnigmaTranspositionRotor>();
         fixedInterfaceRotor = InterfaceRotor.getEnigmaInterfaceRotor();
         
-        this.setCts(new CipherTextSink());
-        this.setPts(new PlainTextSource());
+        this.setCts(new TextSink());
+        this.setPts(new TextSource());
     }
 
     /**
@@ -132,34 +178,34 @@ public class EnigmaMachine {
     public void addRotor(EnigmaTranspositionRotor rotor) {
         this.rotors.add(rotor);
     }
-    private CipherTextSink cts;
-    private PlainTextSource pts;
+    private TextSink cts;
+    private TextSource pts;
 
     /**
-     * @return the CipherTextSink
+     * @return the TextSink
      */
-    public CipherTextSink getCts() {
+    public TextSink getCts() {
         return cts;
     }
 
     /**
-     * @param cts the CipherTextSink to set
+     * @param cts the TextSink to set
      */
-    public void setCts(CipherTextSink cts) {
+    public void setCts(TextSink cts) {
         this.cts = cts;
     }
 
     /**
-     * @return the PlainTextSource
+     * @return the TextSource
      */
-    public PlainTextSource getPts() {
+    public TextSource getPts() {
         return pts;
     }
 
     /**
-     * @param pts the PlainTextSource to set
+     * @param pts the TextSource to set
      */
-    public void setPts(PlainTextSource pts) {
+    public void setPts(TextSource pts) {
         this.pts = pts;
     }
     //</editor-fold>
