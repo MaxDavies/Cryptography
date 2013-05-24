@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="routeciphertest.TranspositionTest" tests="5" time="0.166" timestamp="2013-05-24T15:15:29">
+<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="routeciphertest.TranspositionTest" tests="5" time="0.174" timestamp="2013-05-24T16:41:07">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -55,7 +55,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner routeciphertest.TranspositionTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-routeciphertest.TranspositionTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher8083813427157193328.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit2062684523293431675.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner routeciphertest.TranspositionTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-routeciphertest.TranspositionTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher259363201525652733.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit1723977706978360442.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -417,16 +417,16 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
   </properties>
-  <testcase classname="routeciphertest.TranspositionTest" name="testEncode" time="0.004" />
-  <testcase classname="routeciphertest.TranspositionTest" name="testDecode" time="0.0" />
-  <testcase classname="routeciphertest.TranspositionTest" name="testEncodeDecode" time="0.0" />
-  <testcase classname="routeciphertest.TranspositionTest" name="testRails" time="0.087" />
+  <testcase classname="routeciphertest.TranspositionTest" name="testRails" time="0.092" />
   <testcase classname="routeciphertest.TranspositionTest" name="testEncodeDecodeRailJump" time="0.0" />
-  <system-out><![CDATA[encode
+  <testcase classname="routeciphertest.TranspositionTest" name="testDecode" time="0.0" />
+  <testcase classname="routeciphertest.TranspositionTest" name="testEncodeDecode" time="0.001" />
+  <testcase classname="routeciphertest.TranspositionTest" name="testEncode" time="0.001" />
+  <system-out><![CDATA[rails
+encode/decode rail jump
 decode
 encode/decode
-rails
-encode/decode rail jump
+encode
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -48,7 +48,13 @@ public class EnigmaMachineTest {
     @Test
     public void testEnigma() {
         System.out.println("testEnigma");
-        EnigmaMachine instance = new EnigmaMachine();
+        
+        ArrayList<EnigmaTranspositionRotor> rotors = new ArrayList<EnigmaTranspositionRotor>();
+        rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.I));
+        rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.II));
+        rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.III));
+        
+        EnigmaMachine instance = new EnigmaMachine(rotors);
         instance.encipher("Two can keep a secret if one is dead");
         
 

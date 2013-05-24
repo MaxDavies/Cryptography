@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="macbookKWL.local" name="enigma.EnigmaRotorTest" tests="5" time="0.096" timestamp="2013-05-24T15:15:23">
+<testsuite errors="0" failures="1" hostname="macbookKWL.local" name="enigma.EnigmaRotorTest" tests="5" time="0.109" timestamp="2013-05-24T16:41:02">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -55,7 +55,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaRotorTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaRotorTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher6917553149240683841.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit4988252867501128442.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaRotorTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaRotorTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher1394500193953031099.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit4640388570496355182.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -420,12 +420,12 @@
   <testcase classname="enigma.EnigmaRotorTest" name="testGetRotorTypes" time="0.007" />
   <testcase classname="enigma.EnigmaRotorTest" name="testGetRotorType" time="0.0" />
   <testcase classname="enigma.EnigmaRotorTest" name="testSetRotorType" time="0.0" />
-  <testcase classname="enigma.EnigmaRotorTest" name="testValues" time="0.008">
+  <testcase classname="enigma.EnigmaRotorTest" name="testValueOf" time="0.004" />
+  <testcase classname="enigma.EnigmaRotorTest" name="testValues" time="0.01">
     <failure message="array lengths differed, expected.length=29 actual.length=30" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: array lengths differed, expected.length=29 actual.length=30
 	at enigma.EnigmaRotorTest.testValues(EnigmaRotorTest.java:54)
 </failure>
   </testcase>
-  <testcase classname="enigma.EnigmaRotorTest" name="testValueOf" time="0.004" />
   <system-out><![CDATA[EnigmaRotor: 'RotorTypes' Tests
 =============================+===
  - ValueOf Test : EnigmanRotor = I_C
@@ -461,8 +461,6 @@ EnigmaRotor: 'getRotorType' Test
 =============================+===
 EnigmaRotor: 'setRotorType' Test
 =============================+===
-EnigmaRotorType: 'values' Tests
-===============================
 EnigmaRotor: 'valueOf' Tests
 ================================
  - ValueOf Test : EnigmanRotor = I_C
@@ -494,6 +492,8 @@ EnigmaRotor: 'valueOf' Tests
  - ValueOf Test : EnigmanRotor = REF_B_THIN
  - ValueOf Test : EnigmanRotor = REF_C_THIN
  - ValueOf Test : EnigmanRotor = REF_ETW
+EnigmaRotorType: 'values' Tests
+===============================
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

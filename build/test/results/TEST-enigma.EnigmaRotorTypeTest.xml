@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="enigma.EnigmaRotorTypeTest" tests="7" time="0.088" timestamp="2013-05-24T15:15:24">
+<testsuite errors="0" failures="0" hostname="macbookKWL.local" name="enigma.EnigmaRotorTypeTest" tests="7" time="0.088" timestamp="2013-05-24T16:41:03">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -55,7 +55,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaRotorTypeTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaRotorTypeTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher4970468538294738716.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit1716603727834903821.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaRotorTypeTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaRotorTypeTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher6442267106347918842.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit9059878416166882399.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -417,14 +417,27 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
   </properties>
-  <testcase classname="enigma.EnigmaRotorTypeTest" name="testModels" time="0.006" />
-  <testcase classname="enigma.EnigmaRotorTypeTest" name="testGetModel" time="0.0" />
+  <testcase classname="enigma.EnigmaRotorTypeTest" name="testValues" time="0.005" />
+  <testcase classname="enigma.EnigmaRotorTypeTest" name="testValueOf" time="0.002" />
+  <testcase classname="enigma.EnigmaRotorTypeTest" name="testModels" time="0.002" />
+  <testcase classname="enigma.EnigmaRotorTypeTest" name="testGetModel" time="0.001" />
   <testcase classname="enigma.EnigmaRotorTypeTest" name="testSetModel" time="0.0" />
   <testcase classname="enigma.EnigmaRotorTypeTest" name="testIsReflector" time="0.002" />
-  <testcase classname="enigma.EnigmaRotorTypeTest" name="testSetReflector" time="0.0" />
-  <testcase classname="enigma.EnigmaRotorTypeTest" name="testValueOf" time="0.003" />
-  <testcase classname="enigma.EnigmaRotorTypeTest" name="testValues" time="0.004" />
-  <system-out><![CDATA[EnigmaRotorType 'Model Values' Test
+  <testcase classname="enigma.EnigmaRotorTypeTest" name="testSetReflector" time="0.001" />
+  <system-out><![CDATA[EnigmaRotorType: 'values' Tests
+===============================
+EnigmaRotorType: 'valueOf' Tests
+================================
+ - ValueOf Test : EnigmanRotorType = COMMERCIAL [Commercial Enigma A, B]
+ - ValueOf Test : EnigmanRotorType = ROCKET [German Railway [Rocket]]
+ - ValueOf Test : EnigmanRotorType = SWISS_K [Swiss K]
+ - ValueOf Test : EnigmanRotorType = ENIGMA_1 [Enigma 1]
+ - ValueOf Test : EnigmanRotorType = M3_ARMY [M3 Army]
+ - ValueOf Test : EnigmanRotorType = M3_M4_NAVAL [M3 & M4 Naval]
+ - ValueOf Test : EnigmanRotorType = M4_R2 [M4 R2]
+ - ValueOf Test : EnigmanRotorType = M4_R1 [M4 R1]
+ - ValueOf Test : EnigmanRotorType = NONE []
+EnigmaRotorType 'Model Values' Test
 EnigmaRotorType: 'valueOf' Tests
 ================================
  - ValueOf Test : EnigmanRotorTypeModel = COMMERCIAL [Commercial Enigma A, B]
@@ -451,19 +464,6 @@ EnigmaRotorType 'isReflector' Tests
  - IsReflector Test : EnigmanRotorType = M4_R2 [M4 R2]
  - IsReflector Test : EnigmanRotorType = NONE []
 EnigmaRotorType 'setReflector' Test
-EnigmaRotorType: 'valueOf' Tests
-================================
- - ValueOf Test : EnigmanRotorType = COMMERCIAL [Commercial Enigma A, B]
- - ValueOf Test : EnigmanRotorType = ROCKET [German Railway [Rocket]]
- - ValueOf Test : EnigmanRotorType = SWISS_K [Swiss K]
- - ValueOf Test : EnigmanRotorType = ENIGMA_1 [Enigma 1]
- - ValueOf Test : EnigmanRotorType = M3_ARMY [M3 Army]
- - ValueOf Test : EnigmanRotorType = M3_M4_NAVAL [M3 & M4 Naval]
- - ValueOf Test : EnigmanRotorType = M4_R2 [M4 R2]
- - ValueOf Test : EnigmanRotorType = M4_R1 [M4 R1]
- - ValueOf Test : EnigmanRotorType = NONE []
-EnigmaRotorType: 'values' Tests
-===============================
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

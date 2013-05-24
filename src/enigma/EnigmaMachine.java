@@ -46,21 +46,36 @@ public class EnigmaMachine {
 //            externalConnection = fixedInterfaceRotor.getExternalConnection( fixedInterfaceRotor.transposeCharacter(cipherChar, TranspositionDirection.INPUT).getInternalConnection());
             externalConnection = fixedInterfaceRotor.getExternalConnection(cipherChar);
             System.out.println("External Interface Rotor");
-            System.out.printf("  POSN = %d PT = %s CNX = %d\n", i, cipherChar, externalConnection);
+            System.out.printf("  PT: %s (%d) XCNX: %d\n", cipherChar, i, externalConnection);
             
-//            for (int input = 0; input < rotors.size(); input++) {
-//                externalConnection = rotors.get(input).transposeToExternalConnection(externalConnection, TranspositionDirection.INPUT);
-//            }
-//            
-//            for (int output = rotors.size() - 1; output >= 0; output++) {
-//                externalConnection = rotors.get(output).transposeToExternalConnection(externalConnection, TranspositionDirection.OUTPUT);
-//            }
-//            
+            
+            
+            int rotorNumber = 0;
+            // "Inbound" transposition
+            for (EnigmaTranspositionRotor rotor : rotors) {
+                System.out.printf("  IN: Transposition Rotor #%d Type: %s Posn: %d\n", rotorNumber, rotor.getEnigmaRotor().getRotorType(), rotor.getPosition());
+                System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.INPUT);
+                System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                rotorNumber++;
+            }
+            
+            // "Outbound" transposition
+            EnigmaTranspositionRotor rotor;
+            for (rotorNumber--; rotorNumber >= 0 ; rotorNumber--) {
+                rotor = rotors.get(rotorNumber);
+                System.out.printf("  OUT: Transposition Rotor #%d Type: %s Posn: %d\n", rotorNumber, rotor.getEnigmaRotor().getRotorType(), rotor.getPosition());
+                System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.INPUT);
+                System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+            }
+            
 //            externalConnection = fixedInterfaceRotor.getExternalConnection( fixedInterfaceRotor.transposeCharacter(cipherChar, TranspositionDirection.OUTPUT).getInternalConnection());
             
-            
+            cipherChar= fixedInterfaceRotor.getCharacter(externalConnection);
             cipherText += cipherChar;
-            System.out.println("CT = " + cipherChar);
+            System.out.println("CC = " + cipherChar);
+            System.out.println("CT = " + cipherText);
         }
         
         if (getCts() != null) {
@@ -78,8 +93,15 @@ public class EnigmaMachine {
         this.setPts(new PlainTextSource());
     }
 
+    /**
+     *
+     */
     public EnigmaMachine() { }
 
+    /**
+     *
+     * @param rotors
+     */
     public EnigmaMachine(ArrayList<EnigmaTranspositionRotor> rotors) {
         this.rotors = rotors;
     }

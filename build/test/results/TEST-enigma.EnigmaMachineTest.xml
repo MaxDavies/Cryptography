@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="macbookKWL.local" name="enigma.EnigmaMachineTest" tests="1" time="0.98" timestamp="2013-05-24T15:15:21">
+<testsuite errors="1" failures="0" hostname="macbookKWL.local" name="enigma.EnigmaMachineTest" tests="1" time="0.097" timestamp="2013-05-24T16:41:01">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -55,7 +55,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaMachineTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaMachineTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher8408533311581936632.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit3977198491725135152.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.EnigmaMachineTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.EnigmaMachineTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher7993475336237985548.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit4597392290799407583.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -416,10 +416,10 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
   </properties>
-  <testcase classname="enigma.EnigmaMachineTest" name="testEnigma" time="0.022">
+  <testcase classname="enigma.EnigmaMachineTest" name="testEnigma" time="0.025">
     <error message="String index out of range: 28" type="java.lang.StringIndexOutOfBoundsException">java.lang.StringIndexOutOfBoundsException: String index out of range: 28
 	at java.lang.String.charAt(String.java:658)
-	at enigma.EnigmaMachine.encipher(EnigmaMachine.java:44)
+	at enigma.EnigmaMachine.encipher(EnigmaMachine.java:43)
 	at enigma.EnigmaMachineTest.testEnigma(EnigmaMachineTest.java:52)
 </error>
   </testcase>
@@ -427,89 +427,61 @@
 Plain Text = 
 Two can keep a secret if one is dead
 External Interface Rotor
-  POSN = 0 PT = T CNX = 19
-CT = T
+  POSN = 0 PT = T XCNX = 19
 External Interface Rotor
-  POSN = 1 PT = W CNX = 22
-CT = W
+  POSN = 1 PT = W XCNX = 22
 External Interface Rotor
-  POSN = 2 PT = O CNX = 14
-CT = O
+  POSN = 2 PT = O XCNX = 14
 External Interface Rotor
-  POSN = 3 PT = C CNX = 2
-CT = C
+  POSN = 3 PT = C XCNX = 2
 External Interface Rotor
-  POSN = 4 PT = A CNX = 0
-CT = A
+  POSN = 4 PT = A XCNX = 0
 External Interface Rotor
-  POSN = 5 PT = N CNX = 13
-CT = N
+  POSN = 5 PT = N XCNX = 13
 External Interface Rotor
-  POSN = 6 PT = K CNX = 10
-CT = K
+  POSN = 6 PT = K XCNX = 10
 External Interface Rotor
-  POSN = 7 PT = E CNX = 4
-CT = E
+  POSN = 7 PT = E XCNX = 4
 External Interface Rotor
-  POSN = 8 PT = E CNX = 4
-CT = E
+  POSN = 8 PT = E XCNX = 4
 External Interface Rotor
-  POSN = 9 PT = P CNX = 15
-CT = P
+  POSN = 9 PT = P XCNX = 15
 External Interface Rotor
-  POSN = 10 PT = A CNX = 0
-CT = A
+  POSN = 10 PT = A XCNX = 0
 External Interface Rotor
-  POSN = 11 PT = S CNX = 18
-CT = S
+  POSN = 11 PT = S XCNX = 18
 External Interface Rotor
-  POSN = 12 PT = E CNX = 4
-CT = E
+  POSN = 12 PT = E XCNX = 4
 External Interface Rotor
-  POSN = 13 PT = C CNX = 2
-CT = C
+  POSN = 13 PT = C XCNX = 2
 External Interface Rotor
-  POSN = 14 PT = R CNX = 17
-CT = R
+  POSN = 14 PT = R XCNX = 17
 External Interface Rotor
-  POSN = 15 PT = E CNX = 4
-CT = E
+  POSN = 15 PT = E XCNX = 4
 External Interface Rotor
-  POSN = 16 PT = T CNX = 19
-CT = T
+  POSN = 16 PT = T XCNX = 19
 External Interface Rotor
-  POSN = 17 PT = I CNX = 8
-CT = I
+  POSN = 17 PT = I XCNX = 8
 External Interface Rotor
-  POSN = 18 PT = F CNX = 5
-CT = F
+  POSN = 18 PT = F XCNX = 5
 External Interface Rotor
-  POSN = 19 PT = O CNX = 14
-CT = O
+  POSN = 19 PT = O XCNX = 14
 External Interface Rotor
-  POSN = 20 PT = N CNX = 13
-CT = N
+  POSN = 20 PT = N XCNX = 13
 External Interface Rotor
-  POSN = 21 PT = E CNX = 4
-CT = E
+  POSN = 21 PT = E XCNX = 4
 External Interface Rotor
-  POSN = 22 PT = I CNX = 8
-CT = I
+  POSN = 22 PT = I XCNX = 8
 External Interface Rotor
-  POSN = 23 PT = S CNX = 18
-CT = S
+  POSN = 23 PT = S XCNX = 18
 External Interface Rotor
-  POSN = 24 PT = D CNX = 3
-CT = D
+  POSN = 24 PT = D XCNX = 3
 External Interface Rotor
-  POSN = 25 PT = E CNX = 4
-CT = E
+  POSN = 25 PT = E XCNX = 4
 External Interface Rotor
-  POSN = 26 PT = A CNX = 0
-CT = A
+  POSN = 26 PT = A XCNX = 0
 External Interface Rotor
-  POSN = 27 PT = D CNX = 3
-CT = D
+  POSN = 27 PT = D XCNX = 3
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

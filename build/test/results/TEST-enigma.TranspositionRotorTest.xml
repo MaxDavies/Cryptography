@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="2" failures="2" hostname="macbookKWL.local" name="enigma.TranspositionRotorTest" tests="15" time="0.17" timestamp="2013-05-24T15:15:26">
+<testsuite errors="2" failures="2" hostname="macbookKWL.local" name="enigma.TranspositionRotorTest" tests="15" time="0.11" timestamp="2013-05-24T16:41:05">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -55,7 +55,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.TranspositionRotorTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.TranspositionRotorTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher3670475027717187325.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit2603690203433282406.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner enigma.TranspositionRotorTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kevin.lawrence/Documents/Source/Cryptography/build/test/results/TEST-enigma.TranspositionRotorTest.xml crashfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junitvmwatcher8294180316637484673.properties propsfile=/Users/kevin.lawrence/Documents/Source/Cryptography/build/junit5711138057767005661.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -417,19 +417,19 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
   </properties>
-  <testcase classname="enigma.TranspositionRotorTest" name="testRotate_no_args" time="0.006" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testRotate_args" time="0.0" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testTransposeConnection" time="0.01">
+  <testcase classname="enigma.TranspositionRotorTest" name="testRotate_no_args" time="0.005" />
+  <testcase classname="enigma.TranspositionRotorTest" name="testRotate_args" time="0.001" />
+  <testcase classname="enigma.TranspositionRotorTest" name="testTransposeConnection" time="0.007">
     <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
 	at enigma.TranspositionRotorTest.testTransposeConnection(TranspositionRotorTest.java:182)
 </failure>
   </testcase>
-  <testcase classname="enigma.TranspositionRotorTest" name="testTransposeCharacter" time="0.003">
+  <testcase classname="enigma.TranspositionRotorTest" name="testTransposeCharacter" time="0.002">
     <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
 	at enigma.TranspositionRotorTest.testTransposeCharacter(TranspositionRotorTest.java:199)
 </failure>
   </testcase>
-  <testcase classname="enigma.TranspositionRotorTest" name="testGetOutput" time="0.015">
+  <testcase classname="enigma.TranspositionRotorTest" name="testGetOutput" time="0.002">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at enigma.TranspositionRotor.getOutput(TranspositionRotor.java:245)
 	at enigma.TranspositionRotorTest.testGetOutput(TranspositionRotorTest.java:211)
@@ -441,15 +441,15 @@
 	at enigma.TranspositionRotorTest.testGetInput(TranspositionRotorTest.java:226)
 </error>
   </testcase>
-  <testcase classname="enigma.TranspositionRotorTest" name="testSetTranspositionMaps" time="0.001" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testGetDirection" time="0.0" />
+  <testcase classname="enigma.TranspositionRotorTest" name="testSetTranspositionMaps" time="0.0" />
+  <testcase classname="enigma.TranspositionRotorTest" name="testGetDirection" time="0.001" />
   <testcase classname="enigma.TranspositionRotorTest" name="testSetDirection" time="0.0" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testGetSteps" time="0.001" />
+  <testcase classname="enigma.TranspositionRotorTest" name="testGetSteps" time="0.0" />
   <testcase classname="enigma.TranspositionRotorTest" name="testSetSteps" time="0.001" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testIsReflector" time="0.001" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testSetReflector" time="0.0" />
+  <testcase classname="enigma.TranspositionRotorTest" name="testIsReflector" time="0.0" />
+  <testcase classname="enigma.TranspositionRotorTest" name="testSetReflector" time="0.001" />
   <testcase classname="enigma.TranspositionRotorTest" name="testGetPosition" time="0.0" />
-  <testcase classname="enigma.TranspositionRotorTest" name="testSetPosition" time="0.001" />
+  <testcase classname="enigma.TranspositionRotorTest" name="testSetPosition" time="0.0" />
   <system-out><![CDATA[rotate
 rotate
 transposeConnection
