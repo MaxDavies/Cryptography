@@ -8,9 +8,9 @@ package cryptography;
  *
  * @author kevin.lawrence
  */
-public class Library {
+public class Utility {
 
-    //<editor-fold defaultstate="collapsed" desc="Arrays">
+    //<editor-fold defaultstate="collapsed" desc="Array Methods">
     public static String array2DToString(char[][] array) {
         String text = "";
         for (int row = 0; row < array.length; row++) {
@@ -46,17 +46,10 @@ public class Library {
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Methods">
-    /**
-     * Generate random char between a and z
-     *
-     * @return
-     */
-    public static char getRandomLetter() {
-        int CHAR_BASE = 97;
-        int CHAR_RANGE = 26;
-
-        return (char) ((int) ((Math.random() * CHAR_RANGE) + CHAR_BASE));
-    }
+    public static int CHAR_RANGE = 26;
+    public static int CHAR_BASE = 97;
+    public static int LOWER_CHAR_BASE = 97;
+    public static int UPPER_CHAR_BASE = 65;
 
     /**
      * Generate random char between the ordinal integer value rangeBase
@@ -70,15 +63,21 @@ public class Library {
     }
 
     /**
+     * Generate random char between a and z
+     *
+     * @return
+     */
+    public static char getRandomLetter() {
+        return getRandomCharacter(CHAR_BASE, CHAR_RANGE);
+    }
+
+    /**
      * Generate random char between lowercase 'a' and a lowercase 'z'
      *
      * @return
      */
     public static char getRandomLowerCaseLetter() {
-        int LOWER_CHAR_BASE = 97;
-        int CHAR_RANGE = 26;
-
-        return (char) ((int) ((Math.random() * CHAR_RANGE) + LOWER_CHAR_BASE));
+        return getRandomCharacter(LOWER_CHAR_BASE, CHAR_RANGE);
     }
 
     /**
@@ -87,10 +86,7 @@ public class Library {
      * @return
      */
     public static char getRandomUpperCaseLetter() {
-        int UPPER_CHAR_BASE = 65;
-        int CHAR_RANGE = 26;
-
-        return (char) ((int) ((Math.random() * CHAR_RANGE) + UPPER_CHAR_BASE));
+        return getRandomCharacter(UPPER_CHAR_BASE, CHAR_RANGE);
     }
 
     /**
@@ -112,5 +108,5 @@ public class Library {
     public static int getRandomInteger(int minimum, int maximum) {
         return (int) ((Math.random() * (maximum - minimum)) + minimum);
     }
-    //</editor-fold>
+    //</editor-fold>    
 }

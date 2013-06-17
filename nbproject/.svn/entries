@@ -11,8 +11,8 @@ https://brentwoodcollege.svn.cvsdude.com/cryptography
 2
 kevinwlawrence
 has-props
-
-
+has-prop-mods
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -25,6 +25,74 @@ has-props
 
 
 a7aef76b-52d4-4f37-8d5c-04d05e5a0f03
+
+build-impl.xml
+file
+
+
+
+
+2012-01-09T04:46:52.000000Z
+e9627233e87912abed137e109c077c14
+2012-01-09T05:16:54.127386Z
+2
+kevinwlawrence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+55909
+
+genfiles.properties
+file
+
+
+
+
+2012-01-09T04:46:52.000000Z
+ca30e475d64878a007c24ee8a440bef2
+2012-01-09T05:16:54.127386Z
+2
+kevinwlawrence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+467
 
 project.properties
 file
@@ -93,72 +161,4 @@ kevinwlawrence
 
 
 505
-
-genfiles.properties
-file
-
-
-
-
-2012-01-09T04:46:52.000000Z
-ca30e475d64878a007c24ee8a440bef2
-2012-01-09T05:16:54.127386Z
-2
-kevinwlawrence
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-467
-
-build-impl.xml
-file
-
-
-
-
-2012-01-09T04:46:52.000000Z
-e9627233e87912abed137e109c077c14
-2012-01-09T05:16:54.127386Z
-2
-kevinwlawrence
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-55909
 
