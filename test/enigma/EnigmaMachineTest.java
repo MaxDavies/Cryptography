@@ -55,7 +55,6 @@ public class EnigmaMachineTest {
         rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.III));
         
         EnigmaMachine instance = new EnigmaMachine(rotors);
-        System.out.println("ghghghghghghghghgh");
         String cipherText = instance.encipher("Two can keep a secret if one is dead");
         System.out.println("=======================================================");
         String decipheredText = instance.decipher(cipherText);

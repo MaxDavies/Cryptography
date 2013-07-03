@@ -4,7 +4,7 @@
  */
 package routecipher;
 
-import cryptography.Library;
+import cryptography.Utility;
 
 /**
  *
@@ -20,9 +20,7 @@ public class RailRouteCipher implements RouteCipher2D {
     public RailRouteCipher(int rows, int columns) {
         this.rows = rows;
         this.columns = columns;
-    }
-
-    
+    }   
 
     /*
      *   two can keep a secret if one is dead
@@ -104,10 +102,9 @@ public class RailRouteCipher implements RouteCipher2D {
     //</editor-fold>
 
     public String encode(char[][] plainText, StartPoint startPoint) {
-        return encode(Library.array2DToString(plainText));
+        return encode(Utility.array2DToString(plainText));
     }
 
-    
     public String encode(String plainText) {
         String cipherText = "";
         
@@ -122,7 +119,7 @@ public class RailRouteCipher implements RouteCipher2D {
             // write the plainText string into the array
             for (int row = 0; row < rows; row++) {
                 for (int column = 0; column < columns; column++) {
-                    cipher[row][column] = (index >= plainText.length()) ? Library.getRandomLetter() : plainText.charAt(index);
+                    cipher[row][column] = (index >= plainText.length()) ? Utility.getRandomLetter() : plainText.charAt(index);
                     index++;
                 }
             }
@@ -140,7 +137,7 @@ public class RailRouteCipher implements RouteCipher2D {
     public char[][] decode(String cipherText, StartPoint startPoint, int columns, int rows) {
         String plainText = decode(cipherText);
         
-        return Library.stringTo2DArray(plainText, rows, columns);
+        return Utility.stringTo2DArray(plainText, rows, columns);
     }
 
     public String decode(String cipherText) {

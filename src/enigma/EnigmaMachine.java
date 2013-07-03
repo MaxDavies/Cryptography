@@ -11,17 +11,15 @@ import java.util.ArrayList;
  * @author kevin.lawrence
  */
 public class EnigmaMachine {
-    
+
     //<editor-fold defaultstate="collapsed" desc="Source / Sink">
-    public class TextSink {
-        
+    public class TextSink {     
         public void send(String text) {
             System.out.printf("Output = %s\n", text);
         }
     }
     
-    public class TextSource {
-        
+    public class TextSource {      
         public void receive(String text) {
             System.out.printf("Input = %s", text);
         }
@@ -130,7 +128,6 @@ public class EnigmaMachine {
     }  
     
     //<editor-fold defaultstate="collapsed" desc="Constructors">
-
     {
         rotors = new ArrayList<EnigmaTranspositionRotor>();
         fixedInterfaceRotor = InterfaceRotor.getEnigmaInterfaceRotor();
@@ -156,8 +153,10 @@ public class EnigmaMachine {
     //<editor-fold defaultstate="collapsed" desc="Properties">
     private ArrayList<EnigmaTranspositionRotor> rotors;
     private InterfaceRotor fixedInterfaceRotor;
+    private TextSink cts;
+    private TextSource pts;
+    private TranspositionRotorManager rotorManager;
     
-
     /**
      * @return the rotors
      */
@@ -170,6 +169,9 @@ public class EnigmaMachine {
      */
     public void setRotors(ArrayList<EnigmaTranspositionRotor> rotors) {
         this.rotors = rotors;
+//        if (this.rotorManager != null){
+//            this.rotorManager.setTranspositionRotors(this.rotors);
+//        }
     }
 
     /**
@@ -178,9 +180,21 @@ public class EnigmaMachine {
     public void addRotor(EnigmaTranspositionRotor rotor) {
         this.rotors.add(rotor);
     }
-    private TextSink cts;
-    private TextSource pts;
+    
+        /**
+     * @return the rotorManager
+     */
+    public TranspositionRotorManager getRotorManager() {
+        return rotorManager;
+    }
 
+    /**
+     * @param rotorManager the rotorManager to set
+     */
+    public void setRotorManager(TranspositionRotorManager rotorManager) {
+        this.rotorManager = rotorManager;
+    }
+    
     /**
      * @return the TextSink
      */
