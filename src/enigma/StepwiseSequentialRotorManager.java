@@ -135,6 +135,7 @@ public class StepwiseSequentialRotorManager implements TranspositionRotorManager
     }
 
     //</editor-fold>
+    
     //<editor-fold defaultstate="collapsed" desc="Event Methods">
     public void beforeProcessCharacter() {
         //do nothing...

@@ -4,8 +4,6 @@
  */
 package enigma;
 
-import enigma.EnigmaMachine.TextSink;
-import enigma.EnigmaMachine.TextSource;
 import java.util.ArrayList;
 
 /**
@@ -14,109 +12,133 @@ import java.util.ArrayList;
  */
 public class TranspositionCipherMachine {
 
-    //<editor-fold defaultstate="collapsed" desc="Encipher and Decipher Methods">
+//    <editor-fold defaultstate="collapsed" desc="Encipher and Decipher Methods">
     public String encipher(String plainText) {
         String cipherText = "";
         char cipherChar;
         int externalConnection;
         String text = (plainText.replaceAll(" ", "")).toUpperCase();
-        
-        System.out.println("Plain Text = \n" + plainText);
-        
+
+        if (verbose) {
+            System.out.println("Plain Text = \n" + plainText);
+        }
+
         for (int i = 0; i < text.length(); i++) {
             cipherChar = text.charAt(i);
-            
+
             //get interface connection position
             //            externalConnection = fixedInterfaceRotor.getExternalConnection( fixedInterfaceRotor.transposeCharacter(cipherChar, TranspositionDirection.INPUT).getInternalConnection());
             externalConnection = fixedInterfaceRotor.getExternalConnection(cipherChar);
-            System.out.println("External Interface Rotor");
-            System.out.printf("  PT: %s (%d) XCNX: %d\n", cipherChar, i, externalConnection);
-            
+            if (verbose) {
+                System.out.println("External Interface Rotor");
+                System.out.printf("  PT: %s (%d) XCNX: %d\n", cipherChar, i, externalConnection);
+            }
             int rotorNumber = 0;
             // "Inbound" transposition
             for (TranspositionRotor rotor : rotors) {
-//                System.out.printf("  IN: Transposition Rotor #%d Type: %s Posn: %d\n", rotorNumber, rotor.get.getEnigmaRotor().getRotorType(), rotor.getPosition());
-//                System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                if (verbose) {
+                    System.out.printf("  IN: Transposition Rotor #%d Posn: %d\n", rotorNumber, rotor.getPosition());
+                    System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                }
                 externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.INPUT);
-                System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                if (verbose) {
+                    System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                }
                 rotorNumber++;
             }
-            
+
             // "Outbound" transposition
             TranspositionRotor rotor;
             for (rotorNumber--; rotorNumber >= 0; rotorNumber--) {
                 rotor = rotors.get(rotorNumber);
-//                System.out.printf("  OUT: Transposition Rotor #%d Type: %s Posn: %d\n", rotorNumber, rotor.getEnigmaRotor().getRotorType(), rotor.getPosition());
-                System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                if (verbose) {
+                    System.out.printf("  OUT: Transposition Rotor #%d Posn: %d\n", rotorNumber, rotor.getPosition());
+                    System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                }
                 externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.INPUT);
-                System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                if (verbose) {
+                    System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                }
             }
-            
+
             //            externalConnection = fixedInterfaceRotor.getExternalConnection( fixedInterfaceRotor.transposeCharacter(cipherChar, TranspositionDirection.OUTPUT).getInternalConnection());
-            
+
             cipherChar = fixedInterfaceRotor.getCharacter(externalConnection);
             cipherText += cipherChar;
-            System.out.println("CC = " + cipherChar);
-            System.out.println("CT = " + cipherText);
+            if (verbose) {
+                System.out.println("CC = " + cipherChar);
+                System.out.println("CT = " + cipherText);
+            }
         }
-        
+
         if (getCts() != null) {
             getCts().send(cipherText);
         }
         return cipherText;
     }
-    
+
     public String decipher(String cipherText) {
         String plaintText = "";
         char plainChar;
         int externalConnection;
         String text = (cipherText.replaceAll(" ", "")).toUpperCase();
-        System.out.println("-------------------------------------------------");
-        System.out.println("Cipher Text = \n" + cipherText);
-        
-        //        for (int i = 0; i < cipherText.length(); i++) {
+        if (verbose) {
+            System.out.println("-------------------------------------------------");
+            System.out.println("Cipher Text = \n" + cipherText);
+        }
+
         for (int i = 0; i < text.length(); i++) {
             plainChar = text.charAt(i);
-            
+
             //get interface connection position
             externalConnection = fixedInterfaceRotor.getExternalConnection(plainChar);
-            System.out.println("External Interface Rotor");
-            System.out.printf("  CT: %s (%d) XCNX: %d\n", plainChar, i, externalConnection);
-            
+            if (verbose) {
+                System.out.println("External Interface Rotor");
+                System.out.printf("  CT: %s (%d) XCNX: %d\n", plainChar, i, externalConnection);
+            }
             int rotorNumber = 0;
             // "Inbound" transposition
             for (TranspositionRotor rotor : rotors) {
-//                System.out.printf("  IN: Transposition Rotor #%d Type: %s Posn: %d\n", rotorNumber, rotor.getEnigmaRotor().getRotorType(), rotor.getPosition());
-                System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                if (verbose) {
+                    System.out.printf("  IN: Transposition Rotor #%d Posn: %d\n", rotorNumber, rotor.getPosition());
+                    System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                }
                 externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.OUTPUT);
-                System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                if (verbose) {
+                    System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                }
                 rotorNumber++;
             }
-            
+
             // "Outbound" transposition
             TranspositionRotor rotor;
             for (rotorNumber--; rotorNumber >= 0; rotorNumber--) {
                 rotor = rotors.get(rotorNumber);
-//                System.out.printf("  OUT: Transposition Rotor #%d Type: %s Posn: %d\n", rotorNumber, rotor.getEnigmaRotor().getRotorType(), rotor.getPosition());
-                System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                if (verbose) {
+                    System.out.printf("  OUT: Transposition Rotor #%d Posn: %d\n", rotorNumber, rotor.getPosition());
+                    System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+                }
                 externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.OUTPUT);
-                System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                if (verbose) {
+                    System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
+                }
             }
-            
+
             plainChar = fixedInterfaceRotor.getCharacter(externalConnection);
             plaintText += plainChar;
-            System.out.println("PC = " + plainChar);
-            System.out.println("PT = " + plaintText);
+            if (verbose) {
+                System.out.println("PC = " + plainChar);
+                System.out.println("PT = " + plaintText);
+            }
         }
-        
+
         if (getCts() != null) {
             getCts().send(plaintText);
         }
-        
+
         return plaintText;
     }
-    //</editor-fold>
-    
+//    </editor-fold>
     
 //    <editor-fold defaultstate="collapsed" desc="Properties">
     private ArrayList<TranspositionRotor> rotors;
