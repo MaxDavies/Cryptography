@@ -36,26 +36,83 @@ public class Utility {
         return array;
     }
 
-    public void printArray2D(char[][] array) {
+    public static void printArray2D(char[][] array) {
         for (int row = 0; row < array.length; row++) {
             for (int column = 0; column < array[row].length; column++) {
                 System.out.printf("[%d, %d] = %s \n", row, column, array[row][column]);
             }
         }
     }
-    //</editor-fold>
 
-    //<editor-fold defaultstate="collapsed" desc="Methods">
+    public static void printArray(String name, char[] array) {
+        System.out.println("Array:" + name);
+        System.out.print("{");
+        for (int i = 0; i < array.length; i++) {
+            System.out.printf((i == array.length - 1) ? "'%s'" : "'%s', ", array[i]);
+
+        }
+        System.out.println("}");
+    }
+
+    public static char[] combineCharArrays(char[][] charArrays) {
+        int arrayLength = 0;;
+        for (char[] array : charArrays) {
+            arrayLength += array.length;
+        }
+
+        char[] combined = new char[arrayLength];
+        int index = 0;
+        for (char[] array : charArrays) {
+            System.arraycopy(array, 0, combined, index, array.length);
+            index += array.length;
+        }
+        return combined;
+    }
+
+    public static char[] randomize(char[] input) {
+        char[] random = new char[input.length];
+        boolean[] filled = new boolean[input.length];
+        int index;
+
+        for (char c : input) {
+            index = (int) (Math.random() * input.length);
+            if (filled[index]) {
+                //look for an empty spot, go upwards first
+                for (int i = index; i < input.length; i++) {
+                    if (!filled[i]){
+                        index = i;
+                        break;
+                    }
+                }
+            }
+            if (filled[index]) {
+                //must not have found one above, look for an empty spot below
+                for (int i = 0; i < index; i++) {
+                    if (!filled[i]){
+                        index = i;
+                        break;
+                    }
+                }
+            }
+            random[index] = c;
+            filled[index] = true;
+        }
+        return random;
+    }
+    //</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="Utility Methods">
     public static int CHAR_RANGE = 26;
     public static int CHAR_BASE = 97;
     public static int LOWER_CHAR_BASE = 97;
     public static int UPPER_CHAR_BASE = 65;
 
     /**
-     * Generate random char between the ordinal integer value rangeBase
-     * and the ordinal integer value rangeBase + range
+     * Generate random char between the ordinal integer value rangeBase and the
+     * ordinal integer value rangeBase + range
+     *
      * @param rangeBase the base value of the ordinal set
-     * @param range 
+     * @param range
      * @return
      */
     public static char getRandomCharacter(int rangeBase, int range) {

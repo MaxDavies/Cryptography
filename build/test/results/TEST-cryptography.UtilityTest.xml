@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="WINBOOKKEVINL" name="routeciphertest.InwardClockwiseSpiralTest" tests="1" time="0.352" timestamp="2013-07-04T06:46:33">
+<testsuite errors="0" failures="0" hostname="WINBOOKKEVINL" name="cryptography.UtilityTest" tests="1" time="0.338" timestamp="2013-07-04T06:46:15">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="CA" />
@@ -62,7 +62,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner routeciphertest.InwardClockwiseSpiralTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\documents\kevin.lawrence\My Documents\GitHub\Cryptography\build\test\results\TEST-routeciphertest.InwardClockwiseSpiralTest.xml crashfile=C:\documents\kevin.lawrence\My Documents\GitHub\Cryptography\build\junitvmwatcher86072247864501621.properties propsfile=C:\documents\kevin.lawrence\My Documents\GitHub\Cryptography\build\junit7457302197902348773.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner cryptography.UtilityTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\documents\kevin.lawrence\My Documents\GitHub\Cryptography\build\test\results\TEST-cryptography.UtilityTest.xml crashfile=C:\documents\kevin.lawrence\My Documents\GitHub\Cryptography\build\junitvmwatcher4648154877150441635.properties propsfile=C:\documents\kevin.lawrence\My Documents\GitHub\Cryptography\build\junit4210690855839067101.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -258,7 +258,6 @@
     <property name="org.openide.major.version" value="IDE/1" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
     <property name="netbeans.user" value="C:\Users\kevin.lawrence\AppData\Roaming\NetBeans\7.3" />
-    <property name="tests.failed" value="true" />
     <property name="javadoc.additionalparam" value="" />
     <property name="jnlp.offline-allowed" value="false" />
     <property name="java.io.tmpdir" value="C:\Users\KEVIN~1.LAW\AppData\Local\Temp\" />
@@ -294,22 +293,22 @@
     <property name="libs.primefaces.maven-pom" value="" />
     <property name="libs.javaee-api-6.0.maven-pom" value="" />
     <property name="libs.JWSAntTasks.src" value="" />
-    <property name="libs.CopyLibs.maven-pom" value="" />
     <property name="jar.index" value="false" />
+    <property name="libs.CopyLibs.maven-pom" value="" />
     <property name="libs.absolutelayout.javadoc" value="" />
     <property name="libs.hibernate-persistence.maven-pom" value="" />
     <property name="libs.spring-framework300.javadoc" value="" />
     <property name="java.specification.name" value="Java Platform API Specification" />
     <property name="libs.jakarta_slide_ant_webdav.maven-pom" value="" />
-    <property name="jnlp.mixed.code" value="default" />
     <property name="libs.sjmc-ant-utils.src" value="" />
-    <property name="libs.cdc-agui-swing-layout.javadoc" value="" />
+    <property name="jnlp.mixed.code" value="default" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="libs.cdc-agui-swing-layout.javadoc" value="" />
     <property name="libs.javac-api.classpath" value="C:\Program Files\NetBeans 7.3\java\modules\ext\nb-javac-api.jar" />
     <property name="libs.nokiaS80-ant-utils.classpath" value="C:\Program Files\NetBeans 7.3\mobility\modules\ext\org-netbeans-modules-j2me-cdc-project-nokiaS80.jar" />
     <property name="java.version" value="1.7.0_21" />
-    <property name="javadoc.version" value="false" />
     <property name="run.jvmargs.ide" value="" />
+    <property name="javadoc.version" value="false" />
     <property name="libs.MySQLDriver.javadoc" value="" />
     <property name="org.openide.version" value="deprecated" />
     <property name="source.encoding" value="UTF-8" />
@@ -326,19 +325,19 @@
     <property name="libs.testng.maven-pom" value="" />
     <property name="libs.jaxb.src" value="" />
     <property name="libs.Java-EE-GlassFish-v3.wsgenerate" value="" />
-    <property name="libs.cdc-ant-utils.src" value="" />
     <property name="work.dir" value="C:\documents\kevin.lawrence\My Documents\GitHub\Cryptography" />
+    <property name="libs.cdc-ant-utils.src" value="" />
     <property name="libs.jaxb.classpath" value="C:\Program Files\NetBeans 7.3\ide\modules\ext\jaxb\jaxb-impl.jar;C:\Program Files\NetBeans 7.3\ide\modules\ext\jaxb\jaxb-xjc.jar;C:\Program Files\NetBeans 7.3\ide\modules\ext\jaxb\jaxb1-impl.jar;C:\Program Files\NetBeans 7.3\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 7.3\ide\modules\ext\jaxb\api\jaxb-api.jar;C:\Program Files\NetBeans 7.3\ide\modules\ext\jaxb\api\jsr173_1.0_api.jar" />
     <property name="do.depend" value="false" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
-    <property name="libs.swing-layout.classpath" value="C:\Program Files\NetBeans 7.3\platform\modules\ext\swing-layout-1.0.4.jar" />
     <property name="libs.spring-webmvc3.0.classpath" value="C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-webmvc-3.1.1.RELEASE.jar" />
+    <property name="libs.swing-layout.classpath" value="C:\Program Files\NetBeans 7.3\platform\modules\ext\swing-layout-1.0.4.jar" />
     <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
     <property name="libs.restlib.src" value="" />
     <property name="javac.source" value="1.5" />
     <property name="build.generated.dir" value="build/generated" />
-    <property name="libs.hibernate-persistence.src" value="" />
     <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="libs.hibernate-persistence.src" value="" />
     <property name="java.specification.version" value="1.7" />
     <property name="java.vm.info" value="mixed mode" />
     <property name="libs.jaxws21.maven-pom" value="" />
@@ -352,8 +351,8 @@
     <property name="built-jar.properties" value="C:\documents\kevin.lawrence\My Documents\GitHub\Cryptography\build\built-jar.properties" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="src.dir" value="src" />
-    <property name="annotation.processing.enabled" value="true" />
     <property name="sun.awt.keepWorkingSetOnMinimize" value="true" />
+    <property name="annotation.processing.enabled" value="true" />
     <property name="libs.jsf20.src" value="" />
     <property name="libs.jpa20-persistence.src" value="" />
     <property name="libs.jsf12.src" value="" />
@@ -378,8 +377,8 @@
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
     <property name="default.javac.source" value="1.7" />
     <property name="debug-transport-by-os" value="dt_shmem" />
-    <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="libs.MySQLDriver.src" value="" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="libs.ant-contrib.maven-pom" value="" />
     <property name="libs.nokiadeployment.javadoc" value="" />
     <property name="build.test.results.dir" value="build/test/results" />
@@ -393,15 +392,15 @@
     <property name="nb.junit.single" value="false" />
     <property name="do.jar" value="true" />
     <property name="libs.ant-contrib.src" value="" />
-    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="netbeans.dirs" value="C:\Program Files\NetBeans 7.3\nb;C:\Program Files\NetBeans 7.3\ergonomics;C:\Program Files\NetBeans 7.3\ide;C:\Program Files\NetBeans 7.3\java;C:\Program Files\NetBeans 7.3\apisupport;C:\Program Files\NetBeans 7.3\webcommon;C:\Program Files\NetBeans 7.3\websvccommon;C:\Program Files\NetBeans 7.3\enterprise;C:\Program Files\NetBeans 7.3\mobility;C:\Program Files\NetBeans 7.3\profiler;C:\Program Files\NetBeans 7.3\python;C:\Program Files\NetBeans 7.3\php;C:\Program Files\NetBeans 7.3\identity;C:\Program Files\NetBeans 7.3\harness;C:\Program Files\NetBeans 7.3\cnd;C:\Program Files\NetBeans 7.3\dlight;C:\Program Files\NetBeans 7.3\groovy;C:\Program Files\NetBeans 7.3\extra;C:\Program Files\NetBeans 7.3\javacard;C:\Program Files\NetBeans 7.3\javafx" />
     <property name="libs.jsf20.javadoc" value="" />
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_21\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
     <property name="libs.metro.src" value="" />
-    <property name="libs.savaje-ant-utils.maven-pom" value="" />
     <property name="endorsed.classpath" value="" />
     <property name="libs.semc-ant-utils.src" value="" />
+    <property name="libs.savaje-ant-utils.maven-pom" value="" />
     <property name="libs.absolutelayout.classpath" value="C:\Users\kevin.lawrence\AppData\Roaming\NetBeans\7.3\modules\ext\AbsoluteLayout.jar" />
     <property name="excludes" value="" />
     <property name="libs.metro.classpath" value="C:\Program Files\NetBeans 7.3\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 7.3\enterprise\modules\ext\metro\webservices-api.jar;C:\Program Files\NetBeans 7.3\enterprise\modules\ext\metro\webservices-extra-api.jar;C:\Program Files\NetBeans 7.3\enterprise\modules\ext\metro\webservices-extra.jar;C:\Program Files\NetBeans 7.3\enterprise\modules\ext\metro\webservices-rt.jar;C:\Program Files\NetBeans 7.3\enterprise\modules\ext\metro\webservices-tools.jar" />
@@ -423,20 +422,20 @@
     <property name="libs.Comet-GlassFish-v3.src" value="" />
     <property name="libs.restlib.javadoc" value="C:\Program Files\NetBeans 7.3\enterprise\docs\jersey-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3\enterprise\docs\jersey-apache-client-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3\enterprise\docs\jersey-atom-abdera-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3\enterprise\docs\jersey-guice-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3\enterprise\docs\jersey-multipart-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3\enterprise\docs\jersey-simple-server-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3\enterprise\docs\jersey-spring-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3\enterprise\docs\oauth-client-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3\enterprise\docs\oauth-server-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3\enterprise\docs\oauth-signature-1.13-javadoc.zip" />
     <property name="libs.JAXB-ENDORSED.classpath" value="C:\Program Files\NetBeans 7.3\ide\modules\ext\jaxb\api\jaxb-api.jar" />
-    <property name="libs.javaee-api-7.0.javadoc" value="" />
     <property name="libs.eclipselink.classpath" value="C:\Users\kevin.lawrence\AppData\Roaming\NetBeans\7.3\modules\ext\eclipselink\eclipselink.jar;C:\Users\kevin.lawrence\AppData\Roaming\NetBeans\7.3\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar;C:\Users\kevin.lawrence\AppData\Roaming\NetBeans\7.3\modules\ext\eclipselink\org.eclipse.persistence.jpa.jpql_2.5.0.v20130507-3faac2b.jar" />
-    <property name="libs.beans-binding.javadoc" value="C:\Program Files\NetBeans 7.3\java\docs\beansbinding-1.2.1-doc.zip" />
+    <property name="libs.javaee-api-7.0.javadoc" value="" />
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="libs.beans-binding.javadoc" value="C:\Program Files\NetBeans 7.3\java\docs\beansbinding-1.2.1-doc.zip" />
     <property name="libs.Java-EE-GlassFish-v3.classpath" value="C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.servlet.jsp.jstl.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.ejb.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.security.auth.message.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.enterprise.deploy.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\bean-validator.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.servlet.jsp-api.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.jms.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\weld-osgi-bundle.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jaxb-osgi.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.transaction.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.servlet.jsp.jstl-api.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\endorsed\javax.annotation.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.el-api.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.management.j2ee.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.persistence.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.resource.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.mail.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.servlet-api.jar;C:\Program Files\glassfish-3.1.2.2\mq\lib\jaxm-api.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\webservices-osgi.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\endorsed\webservices-api-osgi.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.security.jacc.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\javax.faces.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\endorsed\jaxb-api-osgi.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jersey-core.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\web-core.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jackson-core-asl.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jackson-jaxrs.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jackson-mapper-asl.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jersey-client.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jersey-core.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jersey-gf-server.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jersey-json.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jersey-multipart.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\jettison.jar;C:\Program Files\glassfish-3.1.2.2\glassfish\modules\mimepull.jar" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="libs.CopyLibs.classpath" value="C:\Program Files\NetBeans 7.3\java\ant\extra\org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="libs.spring-framework300.classpath" value="C:\Program Files\NetBeans 7.3\ide\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-aop-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-asm-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-aspects-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-beans-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-context-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-context-support-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-core-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-expression-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-instrument-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-instrument-tomcat-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-jdbc-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-jms-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-orm-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-oxm-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-test-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-tx-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-web-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-webmvc-portlet-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-webmvc-3.1.1.RELEASE.jar;C:\Program Files\NetBeans 7.3\java\modules\ext\spring-3.0\spring-struts-3.1.1.RELEASE.jar" />
     <property name="libs.jsp-compiler.maven-pom" value="" />
-    <property name="libs.spring-webmvc.maven-pom" value="" />
     <property name="libs.Java-EE-GlassFish-v3.wsinterop" value="" />
+    <property name="libs.spring-webmvc.maven-pom" value="" />
     <property name="run.jvmargs" value="" />
-    <property name="libs.ejb3-persistence.classpath" value="C:\Program Files\NetBeans 7.3\java\modules\ext\hibernate\ejb3-persistence.jar" />
     <property name="ant.file.Cryptography-impl" value="C:\documents\kevin.lawrence\My Documents\GitHub\Cryptography\nbproject\build-impl.xml" />
+    <property name="libs.ejb3-persistence.classpath" value="C:\Program Files\NetBeans 7.3\java\modules\ext\hibernate\ejb3-persistence.jar" />
     <property name="libs.JAXB-ENDORSED.src" value="" />
     <property name="libs.spring-framework.javadoc" value="" />
     <property name="libs.testng.javadoc" value="C:\Program Files\NetBeans 7.3\platform\docs\testng-6.5.1-javadoc.zip" />
@@ -447,8 +446,8 @@
     <property name="libs.junit.src" value="" />
     <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
     <property name="jnlp.signed" value="false" />
-    <property name="build.dir" value="build" />
     <property name="libs.CopyLibs.src" value="" />
+    <property name="build.dir" value="build" />
     <property name="libs.jsp-compilation.classpath" value="C:\Program Files\NetBeans 7.3\java\ant\lib\ant.jar;C:\Program Files\NetBeans 7.3\enterprise\modules\ext\jstl.jar;C:\Program Files\NetBeans 7.3\java\ant\lib\ant-launcher.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
     <property name="file.encoding" value="Cp1252" />
@@ -459,8 +458,10 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="" />
   </properties>
-  <testcase classname="routeciphertest.InwardClockwiseSpiralTest" name="testEncode" time="0.026" />
-  <system-out><![CDATA[InwardClockwiseSpiral.encode
+  <testcase classname="cryptography.UtilityTest" name="testCombineCharArrays" time="0.053" />
+  <system-out><![CDATA[combineCharArrays
+Array:ALL
+{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' ', '.', ',', '!', '<', '>', '=', '-', '+', '/', '\', '|', '(', ')', '[', ']', '{', '}', ':', ';', '~', '`', '@', '#', '$', '%', '^', '&', '*', '?'}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

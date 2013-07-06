@@ -17,7 +17,8 @@ public class TranspositionCipherMachine {
         String cipherText = "";
         char cipherChar;
         int externalConnection;
-        String text = (plainText.replaceAll(" ", "")).toUpperCase();
+//        String text = (plainText.replaceAll(" ", "")).toUpperCase();
+        String text = plainText;
 
         if (verbose) {
             System.out.println("Plain Text = \n" + plainText);
@@ -81,7 +82,7 @@ public class TranspositionCipherMachine {
         String plaintText = "";
         char plainChar;
         int externalConnection;
-        String text = (cipherText.replaceAll(" ", "")).toUpperCase();
+        String text = cipherText; //(cipherText.replaceAll(" ", "")).toUpperCase();
         if (verbose) {
             System.out.println("-------------------------------------------------");
             System.out.println("Cipher Text = \n" + cipherText);
@@ -279,7 +280,9 @@ public class TranspositionCipherMachine {
      *
      * @param rotors
      */
-    public TranspositionCipherMachine(TranspositionRotorManager rotorManager, ArrayList<TranspositionRotor> rotors) {
+//    public TranspositionCipherMachine(TranspositionRotorManager rotorManager, ArrayList<TranspositionRotor> rotors) {
+    public TranspositionCipherMachine(TranspositionRotorManager rotorManager, InterfaceRotor fixedInterfaceRotor, ArrayList<TranspositionRotor> rotors) {
+        this.fixedInterfaceRotor = fixedInterfaceRotor;
         this.rotorManager = rotorManager;
         this.rotors = rotors;
         connectRotorManager();
