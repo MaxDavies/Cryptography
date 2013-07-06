@@ -4,6 +4,7 @@
  */
 package enigma;
 
+import cryptography.Utility;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -45,9 +46,15 @@ public class TranspositionCipherMachineTest {
         System.out.println("testEncipher");
         
         ArrayList<TranspositionRotor> rotors = new ArrayList<TranspositionRotor>();
-        rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.I));
-        rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.II));
-        rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.III));
+//            public TranspositionRotor(RotationDirection direction, int steps, char[] inputs, char[] outputs){
+
+        
+        rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, TranspositionRotor.INPUT_BASE_ALL, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
+        rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL), Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
+        rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL), Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
+//        rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.I));
+//        rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.II));
+//        rotors.add(new EnigmaTranspositionRotor(EnigmaRotor.III));
         
         TranspositionRotorManager rotorManager = new StepwiseSequentialRotorManager(rotors);
 

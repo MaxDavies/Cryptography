@@ -4,6 +4,7 @@
  */
 package enigma;
 
+import cryptography.Utility;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -21,7 +22,9 @@ public class TranspositionRotor implements Transposition {
     public static final char[] INPUT_BASE_LOWERCASE_ALPHA = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     public static final char[] INPUT_BASE_NUMERIC = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
     public static final char[] INPUT_BASE_SYMBOL = {' ', '.', ',', '!', '<', '>', '=', '-', '+', '/', '\\', '|', '(', ')', '[', ']', '{', '}', ':', ';', '~', '`',  '@', '#', '$', '%', '^', '&', '*', '?'};
-
+    private static final char[][] all = {INPUT_BASE_UPPERCASE_ALPHA, INPUT_BASE_LOWERCASE_ALPHA, INPUT_BASE_NUMERIC, INPUT_BASE_SYMBOL};
+    public static final char[] INPUT_BASE_ALL =  Utility.combineCharArrays(all);  
+    
     public static final char[] TEST_BASE_ALPHA = {'D', 'M', 'T', 'W', 'S', 'I', 'L', 'R', 'U', 'Y', 'Q', 'N', 'K', 'F', 'E', 'J', 'C', 'A', 'Z', 'B', 'P', 'G', 'X', 'O', 'H', 'V'};
     
 //    </editor-fold>
@@ -155,7 +158,6 @@ public class TranspositionRotor implements Transposition {
         return (internalConnection + position) % inputValues.size();
     }
     
-    
     /**
      * @return the external connection point - corrected for the position 
      * (rotation) of the rotor - of the transposed input connection point.
@@ -216,7 +218,6 @@ public class TranspositionRotor implements Transposition {
         return getExternalConnection(internalOutputConnection);
     }
     
-
     public char transposeExternalConnectionToCharacter(int externalConnection, TranspositionDirection direction) {
         return transposeInternalConnectionToCharacter(getInternalConnection(externalConnection), direction);
     }
@@ -224,25 +225,6 @@ public class TranspositionRotor implements Transposition {
     public char transposeInternalConnectionToCharacter(int internalConnection, TranspositionDirection direction) {
         return (direction == TranspositionDirection.INPUT) ? inputValues.get(internalConnection) : outputValues.get(internalConnection);
     }
-    
-//    public TranspositionData transposeCharacter(Character value, TranspositionDirection direction) {
-//        throw new UnsupportedOperationException("Not supported yet.");
-//    }
-
-    //<editor-fold defaultstate="collapsed" desc="Deprecated">
-//    public TranspositionData transposeConnection(int connection, TranspositionDirection direction) {
-//        char connectionChar;
-//        System.out.println("Here");
-//        if (direction == TranspositionDirection.INPUT){
-//            connectionChar = this.inputValues.get( (connection - position) % this.inputValues.size());
-//        } else {
-//            connectionChar = this.inputValues.get( (connection - position) % this.inputValues.size());
-//        }
-//        
-//        return transposeCharacter(connectionChar, direction);
-//    }
-//    
-    //</editor-fold>
     
     public char getOutput(char input) {
         try {
@@ -293,6 +275,13 @@ public class TranspositionRotor implements Transposition {
         this.direction = direction;
         this.steps = steps;
     }
+    
+    public TranspositionRotor(RotationDirection direction, int steps, char[] inputs, char[] outputs){
+        this.direction = direction;
+        this.steps = steps;
+        this.setTranspositionMaps(inputs, outputs);
+    }
+    
 //    </editor-fold>
  
 //    <editor-fold defaultstate="collapsed" desc="Properties">
@@ -321,7 +310,6 @@ public class TranspositionRotor implements Transposition {
         return direction;
     }
     
-    
     /**
      * @param direction the direction to set
      */
@@ -342,6 +330,7 @@ public class TranspositionRotor implements Transposition {
     public void setSteps(int steps) {
         this.steps = steps;
     }
+    
     /**
      * @return the reflector
      */
@@ -370,7 +359,6 @@ public class TranspositionRotor implements Transposition {
         if (position >= 0){
             this.position = position % inputMap.size();
         } else {
-//            this.position = ((inputMap.size() + position) % inputMap.size());
             while (position < 0){
                 position += inputMap.size();
             }
