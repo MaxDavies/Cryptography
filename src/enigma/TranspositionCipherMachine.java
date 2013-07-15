@@ -4,6 +4,7 @@
  */
 package enigma;
 
+import cryptography.CipherOperation;
 import java.util.ArrayList;
 
 /**
@@ -26,6 +27,10 @@ public class TranspositionCipherMachine {
 
         for (int i = 0; i < text.length(); i++) {
             cipherChar = text.charAt(i);
+
+            if (rotorManager != null) {
+                rotorManager.beforeProcessCharacter();
+            }
 
             //get interface connection position
             //            externalConnection = fixedInterfaceRotor.getExternalConnection( fixedInterfaceRotor.transposeCharacter(cipherChar, TranspositionDirection.INPUT).getInternalConnection());
@@ -70,6 +75,10 @@ public class TranspositionCipherMachine {
                 System.out.println("CC = " + cipherChar);
                 System.out.println("CT = " + cipherText);
             }
+
+            if (rotorManager != null) {
+                rotorManager.afterProcessCharacter();
+            }
         }
 
         if (getCts() != null) {
@@ -79,7 +88,7 @@ public class TranspositionCipherMachine {
     }
 
     public String decipher(String cipherText) {
-        String plaintText = "";
+        String plainText = "";
         char plainChar;
         int externalConnection;
         String text = cipherText; //(cipherText.replaceAll(" ", "")).toUpperCase();
@@ -88,8 +97,25 @@ public class TranspositionCipherMachine {
             System.out.println("Cipher Text = \n" + cipherText);
         }
 
-        for (int i = 0; i < text.length(); i++) {
+//      set up rotor
+        if (rotorManager != null) {
+//                rotorManager.resetRotors();
+//                
+//                for (int i = 0; i < text.length(); i++) {
+//                    rotorManager.afterProcessCharacter();
+//                }
+
+            rotorManager.setCipherOperation(CipherOperation.DECIPHER);
+        }
+
+
+
+        for (int i = text.length() - 1; i >= 0; i--) {
             plainChar = text.charAt(i);
+
+            if (rotorManager != null) {
+                rotorManager.beforeProcessCharacter();
+            }
 
             //get interface connection position
             externalConnection = fixedInterfaceRotor.getExternalConnection(plainChar);
@@ -126,21 +152,24 @@ public class TranspositionCipherMachine {
             }
 
             plainChar = fixedInterfaceRotor.getCharacter(externalConnection);
-            plaintText += plainChar;
+            plainText = plainChar + plainText;
             if (verbose) {
                 System.out.println("PC = " + plainChar);
-                System.out.println("PT = " + plaintText);
+                System.out.println("PT = " + plainText);
+            }
+
+            if (rotorManager != null) {
+                rotorManager.afterProcessCharacter();
             }
         }
 
         if (getCts() != null) {
-            getCts().send(plaintText);
+            getCts().send(plainText);
         }
 
-        return plaintText;
+        return plainText;
     }
 //    </editor-fold>
-    
 //    <editor-fold defaultstate="collapsed" desc="Properties">
     private ArrayList<TranspositionRotor> rotors;
     private TranspositionRotorManager rotorManager;
@@ -249,14 +278,18 @@ public class TranspositionCipherMachine {
     public class TextSink {
 
         public void send(String text) {
-            System.out.printf("Output = %s\n", text);
+            if (verbose) {
+                System.out.printf("Output = %s\n", text);
+            }
         }
     }
 
     public class TextSource {
 
         public void receive(String text) {
-            System.out.printf("Input = %s", text);
+            if (verbose) {
+                System.out.printf("Input = %s", text);
+            }
         }
     }
 //    </editor-fold>

@@ -59,6 +59,7 @@ public class EnigmaMachine {
                 rotor = rotors.get(rotorNumber);
                 System.out.printf("  OUT: Transposition Rotor #%d Type: %s Posn: %d\n", rotorNumber, rotor.getEnigmaRotor().getRotorType(), rotor.getPosition());
                 System.out.printf("    XCNX_IN: %d  \n", externalConnection);
+//                externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.INPUT);
                 externalConnection = rotor.transposeToExternalConnection(externalConnection, TranspositionDirection.INPUT);
                 System.out.printf("    XCNX_OUT: %d \n\n", externalConnection);
             }

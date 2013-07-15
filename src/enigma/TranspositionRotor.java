@@ -21,8 +21,10 @@ public class TranspositionRotor implements Transposition {
     public static final char[] INPUT_BASE_UPPERCASE_ALPHA = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
     public static final char[] INPUT_BASE_LOWERCASE_ALPHA = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     public static final char[] INPUT_BASE_NUMERIC = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
-    public static final char[] INPUT_BASE_SYMBOL = {' ', '.', ',', '!', '<', '>', '=', '-', '+', '/', '\\', '|', '(', ')', '[', ']', '{', '}', ':', ';', '~', '`',  '@', '#', '$', '%', '^', '&', '*', '?'};
-    private static final char[][] all = {INPUT_BASE_UPPERCASE_ALPHA, INPUT_BASE_LOWERCASE_ALPHA, INPUT_BASE_NUMERIC, INPUT_BASE_SYMBOL};
+    public static final char[] INPUT_BASE_SYMBOL = {' ', '.', ',', '!', '<', '>', '=', '-', '+', '/', '\\', '|', '(', ')', '[', ']', '{', '}', ':', ';', '~', '`',  '@', '#', '$', '%', '^', '&', '*', '?', '\''};
+    
+    public static final char[] INPUT_BASE_ADDITIONAL = {'ü'};
+    private static final char[][] all = {INPUT_BASE_UPPERCASE_ALPHA, INPUT_BASE_LOWERCASE_ALPHA, INPUT_BASE_NUMERIC, INPUT_BASE_SYMBOL, INPUT_BASE_ADDITIONAL};
     public static final char[] INPUT_BASE_ALL =  Utility.combineCharArrays(all);  
     
     public static final char[] TEST_BASE_ALPHA = {'D', 'M', 'T', 'W', 'S', 'I', 'L', 'R', 'U', 'Y', 'Q', 'N', 'K', 'F', 'E', 'J', 'C', 'A', 'Z', 'B', 'P', 'G', 'X', 'O', 'H', 'V'};
