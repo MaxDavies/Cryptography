@@ -31,6 +31,12 @@ public class StepwiseSequentialRotorManager implements TranspositionRotorManager
 
     public void setCipherOperation(CipherOperation operation) {
         this.operation = operation;
+
+        if (rotors != null){
+            for(TranspositionRotor rotor : rotors){
+                rotor.setDirection((operation == CipherOperation.ENCIPHER) ? RotationDirection.FORWARD : RotationDirection.BACKWARD);
+            }
+        }
     }
 
     public CipherOperation getCipherOperation() {
@@ -139,14 +145,21 @@ public class StepwiseSequentialRotorManager implements TranspositionRotorManager
     //<editor-fold defaultstate="collapsed" desc="Event Methods">
     public void beforeProcessCharacter() {
         //do nothing...
+        if (this.operation == CipherOperation.DECIPHER) {
+            decrementCurrentRotorPosition();
+        }
+
     }
 
     public void afterProcessCharacter() {
         if (this.operation == CipherOperation.ENCIPHER) {
             incrementCurrentRotorPosition();
-        } else {
-            decrementCurrentRotorPosition();
-        }
+        } 
+//        if (this.operation == CipherOperation.ENCIPHER) {
+//            incrementCurrentRotorPosition();
+//        } else {
+//            decrementCurrentRotorPosition();
+//        }
     }
     //</editor-fold>    
 
