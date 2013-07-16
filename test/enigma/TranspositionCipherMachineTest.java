@@ -48,28 +48,18 @@ public class TranspositionCipherMachineTest {
         ArrayList<TranspositionRotor> rotors = new ArrayList<TranspositionRotor>();
         
         rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, TranspositionRotor.INPUT_BASE_ALL, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
-        rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, TranspositionRotor.INPUT_BASE_ALL, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
-        rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, TranspositionRotor.INPUT_BASE_ALL, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
-//        rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL), Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
-//        rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL), Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
+        rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL), Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
+        rotors.add(new TranspositionRotor(RotationDirection.FORWARD, 1, Utility.randomize(TranspositionRotor.INPUT_BASE_ALL), Utility.randomize(TranspositionRotor.INPUT_BASE_ALL)));
         
         TranspositionRotorManager rotorManager = new StepwiseSequentialRotorManager(rotors);
 
         TranspositionCipherMachine instance = new TranspositionCipherMachine(rotorManager, new InterfaceRotor(TranspositionRotor.INPUT_BASE_ALL), rotors);
-//        TranspositionCipherMachine instance = new TranspositionCipherMachine(null, new InterfaceRotor(TranspositionRotor.INPUT_BASE_ALL), rotors);
 
         instance.setVerbose(false);
-//        instance.setRotorManager(rotorManager);
         String plainText = "Two can keep a secret if one is dead. Two can keep a secret if one is dead.";
-        
         plainText = "Goto Dengo, a lieutenant in the Imperial Japanese Army and a mining engineer involved in an Axis project to bury looted gold in the Philippines. In the present-day storyline, he is a semi-retired chief executive of a large Japanese construction company. Enoch Root, a mysterious, seemingly ageless former Catholic priest and physician, serving as a coast-watcher with the ANZACs during World War II, later a chaplain in the top-secret British-American 'Unit 2702,' and an important figure in the equally mysterious Societas Eruditorum. In the present-day storyline, Root is portrayed as having a passionate belief that cryptography is important for maintaining freedom. Root spent the 1950s working at the National Security Agency and has since been based mostly in the Philippines as a Catholic lay-worker while lately 'gadding about trying to bring Internet stuff to China, but to Randy this just sounds like a cover story for something else.' Root also appears in Stephenson's The Baroque Cycle, which is set between 1666 and 1714. Mr. Wing, a wartime northern Chinese slave of the Japanese in the Philippines, who went on to become a general in the Chinese army and later a senior official in theState Grid Corporation of China. Described by Enoch Root as a 'wily survivor of many purges,' Wing is the only other survivor besides Goto Dengo of the Japanese gold burial project, and he competes with Goto and Epiphyte(2) to recover the buried treasure. Although Root and Wing do not meet during the action of the novel, Randy reflects that 'it is hard not to get the idea that Enoch Root and General Wing may have other reasons to be pissed off at each other.' Douglas MacArthur Shaftoe (named after General Douglas MacArthur), Robert Shaftoe's and Glory Altamira's half-Filipino, half-American son. He is introduced near the end of the World War II storyline as a toddler, when he meets his father, who tries to explain Shaftoe family heritage during the Liberation of Manila. In the modern-day storyline, Douglas is a retired U.S. Navy SEAL officer and U.S. Naval Academy graduate, who lives in the Philippines and operates Semper Marine, an underwater survey business with his daughter, Amy, conducting treasure hunts as a sideline. Dr. Günter Enoch Bobby 'G.E.B.' Kivistik is introduced in the modern storyline as a smug, Oxford-educated liberal-arts professor from Yale who recruits, and later seduces, Randy Waterhouse's girlfriend, Charlene. In the World War II storyline he is the unborn son of Julieta Kivistik and one of three possible fathers (hence his unusual name). His is a minor character in Cryptonomicon, but both his [impending] birth and his participation in Charlene's 'War as Text' conference catalyze major plot developments. Mary cCmndhd Waterhouse, Randy's Australian-born, Qwlghmian grandmother and Lawrence's wife.";
-//        String plainText = "ABC";
-        String encipheredText = instance.encipher(plainText);
-//        System.out.printf("Plain Text     : '%s'\n", plainText);
-//        System.out.printf("Cipher Text    : '%s'\n", encipheredText);
-//        instance.setRotorManager(rotorManager);
-//        System.out.printf("Cipher Text    : '%s'\n", instance.encipher(plainText));
-        
+
+        String encipheredText = instance.encipher(plainText);        
         String decipheredText = instance.decipher(encipheredText);
 //
         System.out.printf("Plain Text     : '%s'\n", plainText);
